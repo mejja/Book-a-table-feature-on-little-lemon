@@ -1,14 +1,16 @@
 import './App.css';
-import Main from './components/Main';
+import Banner from "./components/Banner";
+import DishCard from "./components/DishCard";
 import ResponsiveAppBar from "./components/ResponsiveAppBar";
 
 function App() {
   return (
     <div className="App">
     < ResponsiveAppBar />
-    < Main />
+    < Banner />
+    <DishCard />
     </div>
   );
 }
 
-export default ResponsiveAppBar;
+export default App;
