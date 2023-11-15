@@ -1,11 +1,14 @@
 import './App.css';
+import Main from './components/Main';
+import ResponsiveAppBar from "./components/ResponsiveAppBar";
 
 function App() {
   return (
     <div className="App">
-   <h1>Homepage</h1>
+    < ResponsiveAppBar />
+    < Main />
     </div>
   );
 }
 
-export default App;
+export default ResponsiveAppBar;
