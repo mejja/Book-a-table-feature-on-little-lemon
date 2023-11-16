@@ -7,12 +7,14 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
-import logo from "../rsc/Logo.svg";
+import logo from "../assets/Logo.svg";
+
+// import AdbIcon from "@mui/icons-material/Adb";
+// import Avatar from "@mui/material/Avatar";
+// import Tooltip from "@mui/material/Tooltip";
+
 
 const pages = ["Home", "About", "Menu", "Reservations", "Order Online", "Login"];
 // const settings = ["Profile", "Account", "Dashboard", "Logout"];
