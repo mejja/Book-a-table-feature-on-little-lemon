@@ -6,8 +6,10 @@ import Typography from '@mui/material/Typography';
 
 const DishCard = () => {
     return( 
-    <Grid item xs={4} marginY={2}>
-      <Paper elevation={3}>
+    <Grid item xs={4} marginY={2} sx={{ flexGrow: 1 }} container spacing={2}>
+      <Paper 
+      sx={{borderRadius: 2}}
+      elevation={3}>
         <img 
         src={require('../assets/images/greek_salad.jpg')}
         alt="Greek salad"
@@ -24,7 +26,7 @@ const DishCard = () => {
             display: "flex",
             alignItems: "center"
           }}>
-            <Typography variant="h5" component="body2">
+            <Typography variant="body1" component="span" fontFamily={"Karla, sans-serif"} display={"block"} line-height={"1.8rem"}>
             The famous greek salad of crispy lettuce, peppers, 
             olives and our Chicago style feta cheese, garnished 
             with crunchy garlic and rosemary croutons.
