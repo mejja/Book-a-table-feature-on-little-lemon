@@ -1,1 +1,28 @@
-// Json file to hold menu data for the project and map over them.
+[
+    {
+        "dishes":[
+        {
+        "id":1,
+        "title": "Greek Salad",
+        "paragraph":"The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.",
+        "delivery": "Order Delivery",
+        "image":"greek_salad.jpeg"
+    },
+    {
+        "id":2,
+        "title": "Bruschetta",
+        "paragraph": " Our Bruschetta is made from homemade grilled bread that has been smeared with garlic and seasoned with salt and olive oil. Topped with fresh vegetables.",
+        "delivery": "Order Delivery",
+        "image": "bruschetta.jpeg"
+    },
+    {
+        "id":3,
+        "title": "Lemon Cake",
+        "paragraph": "This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.",
+        "delivery":"Order Delivery",
+        "image": "lemon_cake.jpeg"
+    }
+
+        ],
+
+]

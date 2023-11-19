@@ -2,6 +2,7 @@ import  Paper  from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
 
 
 const DishCard = () => {
@@ -26,13 +27,13 @@ const DishCard = () => {
             display: "flex",
             alignItems: "center"
           }}>
-            <Typography variant="body1" component="span" fontFamily={"Karla, sans-serif"} display={"block"} line-height={"1.8rem"}>
+            <Typography variant="body1" component="span" fontFamily={"Karla, sans-serif"} display={"block"} >
             The famous greek salad of crispy lettuce, peppers, 
             olives and our Chicago style feta cheese, garnished 
             with crunchy garlic and rosemary croutons.
             </Typography>
-
         </Box>
+        <Button variant="outlined" color="primary" size="large">Order Delivery</Button>
       </Paper>
     </Grid>
     );
