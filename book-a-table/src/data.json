@@ -1,6 +1,6 @@
 [
-    {    "id": 1,
-        "name": "Dish Menus",
+    {   "id": 1,
+        "name": "Specials",
         "dishes": [
         {
         "id":1,
