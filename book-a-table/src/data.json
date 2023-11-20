@@ -4,23 +4,23 @@
         {
         "id":1,
         "title": "Greek Salad",
-        "paragraph":"The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.",
+        "text":"The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.",
         "delivery": "Order Delivery",
-        "image":"greek_salad.jpeg"
+        "image":"greek_salad.jpg"
     },
     {
         "id":2,
         "title": "Bruschetta",
-        "paragraph": " Our Bruschetta is made from homemade grilled bread that has been smeared with garlic and seasoned with salt and olive oil. Topped with fresh vegetables.",
+        "text": " Our Bruschetta is made from homemade grilled bread that has been smeared with garlic and seasoned with salt and olive oil. Topped with fresh vegetables.",
         "delivery": "Order Delivery",
-        "image": "bruschetta.jpeg"
+        "image": "bruschetta.jpg"
     },
     {
         "id":3,
         "title": "Lemon Cake",
-        "paragraph": "This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.",
+        "text": "This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.",
         "delivery":"Order Delivery",
-        "image": "lemon_cake.jpeg"
+        "image": "lemon_dessert.jpg"
     }
 
         ],

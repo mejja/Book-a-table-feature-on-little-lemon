@@ -3,7 +3,7 @@ import Grid from "@mui/material/Grid";
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-
+import dishes from "../data.json";
 
 const DishCard = () => {
     return( 
@@ -28,9 +28,7 @@ const DishCard = () => {
             alignItems: "center"
           }}>
             <Typography variant="body1" component="span" fontFamily={"Karla, sans-serif"} display={"block"} >
-            The famous greek salad of crispy lettuce, peppers, 
-            olives and our Chicago style feta cheese, garnished 
-            with crunchy garlic and rosemary croutons.
+            {dishes.text}
             </Typography>
         </Box>
         <Button variant="outlined" color="primary" size="large">Order Delivery</Button>
