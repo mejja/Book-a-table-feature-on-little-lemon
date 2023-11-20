@@ -7,6 +7,7 @@ import Grid from '@mui/material/Grid';
 import menus from  "./data.json";
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
+import SpacingGrid from './components/SpacingGrid';
 
 
 function App({dishes}) {
@@ -14,7 +15,7 @@ function App({dishes}) {
     <div className="App">
     < ResponsiveAppBar />
     < Banner />
-    {/* < SpacingGrid /> */}
+    < SpacingGrid />
     <Container>
       {menus.map((menu) => (
         <>

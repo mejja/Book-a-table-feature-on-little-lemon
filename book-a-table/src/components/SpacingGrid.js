@@ -46,17 +46,17 @@ export default function SpacingGrid() {
                 <RadioGroup
                   name="spacing"
                   aria-label="spacing"
-                  value={spacing.toString()}
+                  value={12}
                   onChange={handleChange}
                   row
                 >
-                  {[0, 0.5, 1, 2, 3, 4, 8, 12].map((value) => (
+                  {/* {[0, 0.5, 1, 2, 3, 4, 8, 12].map((value) => (
                     <FormControlLabel
                       key={value}
                       value={value.toString()}
                       control={<Radio />}
                       label={value.toString()}
-                    />
+                    /> */}
                   ))}
                 </RadioGroup>
               </FormControl>
