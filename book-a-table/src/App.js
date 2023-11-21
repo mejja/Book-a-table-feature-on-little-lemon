@@ -18,7 +18,7 @@ function App({dishes}) {
       {menus.map((menu) => (
         <>
         <Stack
-        direction={{xs: "column", sm: "row", md: "row"}}
+        direction={{xs: "column", sm: "column", md: "row"}}
         spacing={{xs: 1, sm: 2, md: 4}}
         marginTop={25}
         marginBottom={20}>
