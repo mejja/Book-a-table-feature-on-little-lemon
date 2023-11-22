@@ -32,9 +32,9 @@
     margin: 2em;
     width: 250px;
     border-spacing: 2;
+    text-align: center;
 }
 .mask{
-    
     height: 600;
     background-color: rgba(73, 94, 87);
     padding-left: 30;
@@ -44,14 +44,15 @@
 
 #profile-img{
     border-radius: 50%;
-    margin: 1em;
+    margin: 16px;
     width: 30%;
-    size-adjust: 75 75;
+    text-align:center;
 }
-h2{
+.review h2{
     color: #000;
     font-family: Markazi Text,serif;
     font-size: 25px;
     margin: 0.1em;
     text-align: center;
+
 }
