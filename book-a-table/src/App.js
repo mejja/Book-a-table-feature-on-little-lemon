@@ -7,10 +7,22 @@ import Grid from '@mui/material/Grid';
 import menus from  "./data.json";
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 
+const theme = createTheme({
+  palette: {
+    ochre: {
+      main: '#f4ce14',
+      light: '#E9DB5D',
+      dark: '#A29415',
+      contrastText: '#242105',
+    }
+  }
+})
 function App({dishes}) {
   return (
+    <ThemeProvider theme={theme}>
     <div className="App">
     < ResponsiveAppBar />
     < Banner />
@@ -19,7 +31,7 @@ function App({dishes}) {
         <>
         <Stack
         direction={{xs: "column", sm: "column", md: "row"}}
-        spacing={{xs: 1, sm: 2, md: 4}}
+        spacing={{xs: 1, sm: 2, md: 32, lg: 72,  }}
         marginTop={25}
         marginBottom={20}>
         <Typography
@@ -30,7 +42,10 @@ function App({dishes}) {
         >
           {menu.name}
         </Typography>
-        <Button variant="solid" color="primary" size="large">Online Menu</Button>
+        <Button variant="contained" color="ochre" size="medium" 
+        style={{maxHeight: "4em", maxWidth: "4em", minWidth: "350px", minHeight: "4em", fontFamily: "Karla,sans-serif", fontSize: "18px", fontWeight: "800", borderRadius: "3em"}}>
+        Online Menu
+          </Button>
         </Stack>
         <Grid container spacing={5}>
           {menu.dishes.map((dish, index) => 
@@ -40,6 +55,7 @@ function App({dishes}) {
       ))}
     </Container>
     </div>
+    </ThemeProvider>
   );
 }
 
