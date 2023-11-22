@@ -2,3 +2,56 @@
     width: 100%;
     height: 15rem;
 }
+
+.testimonial-header {
+    color: #f4ce14;
+    display: block;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: Markazi Text, serif;
+    margin: 40.2px 0px;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-align: center;
+}
+.review-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+.review{
+    background-color: #fff;
+    box-shadow: 3px 3px 15px rgba(0,0,0,.2);
+    height: 250px;
+    margin: 2em;
+    width: 250px;
+    border-spacing: 2;
+}
+.mask{
+    
+    height: 600;
+    background-color: rgba(73, 94, 87);
+    padding-left: 30;
+    padding-top: 40;
+    color: white;
+}
+
+#profile-img{
+    border-radius: 50%;
+    margin: 1em;
+    width: 30%;
+    size-adjust: 75 75;
+}
+h2{
+    color: #000;
+    font-family: Markazi Text,serif;
+    font-size: 25px;
+    margin: 0.1em;
+    text-align: center;
+}

@@ -9,12 +9,10 @@ const DishCard = ({dish}) => {
     return( 
     <Grid item xs={4} marginY={2} sx={{ flexGrow: 1 }} container spacing={2}>
       <Paper 
-      backgroundColor
-      background-color={"rgb(255, 0, 0)"}
-      sx={{borderRadius: 8}}
+      sx={{borderTopLeftRadius: "10%" , borderTopRightRadius: "10%", backgroundColor: "#f2efef", boxShadow: "5px 10px 20px #ccc", marginBottom:"-0.2em", marginTop:"8em", width: "95%", margin: "-64px 16px 0"}}
       elevation={3}>
         <img 
-        style={{borderRadius: 25, height: 300}}
+        style={{borderTopLeftRadius: "10%", borderTopRightRadius: "10%", height: 300}}
         src={dish.image}
         alt="Menu Dish"
         className="img"
@@ -30,7 +28,7 @@ const DishCard = ({dish}) => {
             display: "flex",
             alignItems: "center"
           }}>
-            <Typography variant="body1" component="span" fontFamily={"Karla, sans-serif"} display={"block"} marginBottom={10} >
+            <Typography variant="body1" component="span" style={{fontSize: 17, fontFamily: "Karla,sans-serif", lineHeight: "1.8em"}} >
             {dish.text}
             </Typography>
         </Box>
@@ -42,7 +40,7 @@ const DishCard = ({dish}) => {
           alignItems: "center"
           }}
         >
-        <Button variant="outlined" color="primary" size="large">{dish.delivery}</Button>
+        <Button color="primary" size="large" style={{marginBottom: "20"}}>{dish.delivery}</Button>
         </Box>
         
       </Paper>

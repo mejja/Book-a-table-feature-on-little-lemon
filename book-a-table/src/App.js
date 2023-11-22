@@ -1,8 +1,9 @@
 import { Container, Typography } from '@mui/material';
 import './App.css';
+import ResponsiveAppBar from "./components/ResponsiveAppBar";
 import Banner from "./components/Banner";
 import DishCard from "./components/DishCard";
-import ResponsiveAppBar from "./components/ResponsiveAppBar";
+import Testimonials from "./components/Testimonials";
 import Grid from '@mui/material/Grid';
 import menus from  "./data.json";
 import Stack from '@mui/material/Stack';
@@ -55,6 +56,8 @@ function App({dishes}) {
       ))}
     </Container>
     </div>
+     
+    < Testimonials />
     </ThemeProvider>
   );
 }
