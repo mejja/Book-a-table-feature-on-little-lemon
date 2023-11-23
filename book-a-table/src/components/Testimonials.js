@@ -10,7 +10,7 @@ import { Box, CardActionArea} from "@mui/material";
 export default function Testimonials() {
   return (
     <header >
-      <div className="mask">
+      <div className="main">
         <div className="testimonial-header">
           <h1>Testimonials</h1>
         </div>
@@ -33,7 +33,7 @@ export default function Testimonials() {
                       Major M.
                     </Typography>
                     <Typography id="h2" variant="body2" color="text.secondary">
-                      "Mahali pazuri pa amani na chakula kitamu"
+                      "Mkahawa wa kimataifa ulio na mandhari tulivu ulio na chakula cha kitamu."
                     </Typography>
                   </CardContent>
                 </CardActionArea>
@@ -105,7 +105,7 @@ export default function Testimonials() {
                       Martin Y.
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                    "Really enjoyed their quality food with cooked with African twist."
+                    "Dey Chop knuckle  this restaurant as de fufu and Swallow de great."
                     </Typography>
                   </CardContent>
                 </CardActionArea>

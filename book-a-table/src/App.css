@@ -14,7 +14,8 @@
     margin-block-end: 0.67em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-    text-align: center;
+    height: 420;
+
 }
 .review-container {
     display: flex;
@@ -34,13 +35,21 @@
     border-spacing: 2;
     text-align: center;
 }
-.mask{
-    height: 600;
+.main{
+    height: 420;
     background-color: rgba(73, 94, 87);
     padding-left: 30;
     padding-top: 40;
     color: white;
 }
+/* .mask{
+    display: flex;
+    height: 600;
+    background-color: rgba(73, 94, 87);
+    padding-left: 30;
+    padding-top: 40;
+    color: white;
+} */
 
 #profile-img{
     border-radius: 50%;
@@ -54,5 +63,20 @@
     font-size: 25px;
     margin: 0.1em;
     text-align: center;
+}
+.featured img {
+    border-radius: 15px;
+    box-shadow: 3px 3px 15px rgba(0,0,0,.2);
+    height: 800px;
+    margin-left: 6em;
+    margin-top: 2em;
+    width: 50%;
+    align-self: flex-end;
+}
+
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    vertical-align: top;
 
 }
