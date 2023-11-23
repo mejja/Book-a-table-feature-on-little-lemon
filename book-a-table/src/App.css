@@ -67,10 +67,12 @@
 .featured img {
     border-radius: 15px;
     box-shadow: 3px 3px 15px rgba(0,0,0,.2);
-    height: 800px;
-    margin-left: 6em;
-    margin-top: 2em;
-    width: 50%;
+    height: 550px;
+    /* margin-left: 6em; */
+    margin-top: 6em;
+    width: 100%;
+    padding-left: 20;
+    margin-left: -25%;
     align-self: flex-end;
 }
 
@@ -78,5 +80,7 @@ img {
     overflow-clip-margin: content-box;
     overflow: clip;
     vertical-align: top;
-
+}
+#testimonial-heading {
+    text-align:center ;
 }

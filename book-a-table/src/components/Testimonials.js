@@ -10,9 +10,9 @@ import { Box, CardActionArea} from "@mui/material";
 export default function Testimonials() {
   return (
     <header >
-      <div className="main">
+      <Box className="main" sx={{padding: 5}}>
         <div className="testimonial-header">
-          <h1>Testimonials</h1>
+          <h1 id="testimonial-heading">Testimonials</h1>
         </div>
          <div className="review-container">
             <div className="review">
@@ -102,7 +102,7 @@ export default function Testimonials() {
                 </div>
                 <CardContent>
                     <Typography id="h2" gutterBottom variant="h5" component="div" >
-                      Martin Y.
+                      Martins Y.
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
                     "Dey Chop knuckle  this restaurant as de fufu and Swallow de great."
@@ -112,7 +112,7 @@ export default function Testimonials() {
               </Card>
               </div>
               </div>
-      </div>
+      </ Box>
     </header>
   );
 }

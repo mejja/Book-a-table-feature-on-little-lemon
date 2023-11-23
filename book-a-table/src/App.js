@@ -9,6 +9,7 @@ import menus from  "./data.json";
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import OffsetGrid from './components/OffsetGrid';
 
 
 const theme = createTheme({
@@ -52,13 +53,14 @@ function App({dishes}) {
           {menu.dishes.map((dish, index) => 
           <DishCard dish={dish} key={index}/>)}
         </Grid>
-        </ >
+        </>
       ))}
     </Container>
     </div>
-     
     < Testimonials />
+    <OffsetGrid />
     </ThemeProvider>
+
   );
 }
 

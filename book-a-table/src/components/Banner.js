@@ -2,7 +2,10 @@ import React from 'react';
 import Button from '@mui/material/Button';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import "../App.css";
-
+import { Box } from '@mui/material';
+import Grid from '@mui/material/Unstable_Grid2';
+import {makeStyles} from '@mui/material/styles';
+// Color theme function
 const theme = createTheme({
   palette: {
     ochre: {
@@ -13,16 +16,30 @@ const theme = createTheme({
     }
   }
 })
+// Setting breakpoint function
+const useStyles = makeStyles((Theme) => ({
+  one: {
+      background: 'black',
+      [theme.breakpoints.down('md')]: {
+          display: 'none',
+      },
+  },
+  two: {
+      background: 'green'
+  }
+}))
 
 export default function Banner() {
+  const classes = useStyles();
   return (
     <ThemeProvider theme={theme}>
     <header style={{ paddingLeft: 0}} >
-      <div
+      <Box
         className="main"
         style={{ height: 500, backgroundColor: 'rgba(73, 94, 87)', paddingLeft: 30, paddingTop: 40, color: 'white'}}
       >
-        <div className='main' >
+        <Grid container spacing={{ xs: 2, md: 4, lg: 8 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+        <Grid xs={2} sm={4} md={4}>
           <div className='d-flex justify-content-center align-items-center h-100'>
             <div className='text-white' style={{paddingLeft: "6em"}}>
               <h1  style={{color: 'yellow', fontSize:50}}>Little Lemon</h1>
@@ -33,12 +50,15 @@ export default function Banner() {
               >Reserve a Table</Button>
             </div>
           </div>
-        </div>
+        </Grid>
+        <Grid xs={1} sm={2} md={2} mdOffset={'auto'} className={classes.one}>
         <div className='featured'>
-            <img alt='featured Dish' 
+            <img alt='featured Dish'
             src={require("../assets/images/restauranfood.jpg")}/>
           </div>
-      </div>
+        </Grid>
+      </Grid>
+      </Box>
     </header>
     </ThemeProvider>
   );
