@@ -21,14 +21,11 @@ const theme = createTheme({
 export default function Banner() {
   return (
     <ThemeProvider theme={theme}>
-    <header>
-      <Box
-        className="main"
-        style={{ height: 550, backgroundColor: 'rgba(73, 94, 87)', paddingLeft: 30, paddingTop: 40, color: 'white'}}
-      >
+    <header className="banner-box">
+      <Box style={{ height: 550, paddingLeft: 30, paddingTop: 40}}>
         <Grid container spacing={{ xs: 2, md: 4, lg: 8 }} columns={{ xs: 4, sm: 8, md: 12 }}>
         <Grid xs={2} sm={4} md={4}>
-          <div className='d-flex justify-content-center align-items-center h-100'>
+          {/* <div className='d-flex justify-content-center align-items-center h-100'> */}
             <div className='text-white' style={{paddingLeft: "6em"}}>
               <h1  style={{color: 'yellow', fontSize:50}}>Little Lemon</h1>
               <h2>Chicago</h2>
@@ -37,7 +34,6 @@ export default function Banner() {
               style={{maxHeight: "4em",  minWidth: "350px", minHeight: "4em", fontFamily: "Karla,sans-serif", fontSize: "18px", fontWeight: "800", borderRadius: "3em"}}
               >Reserve a Table</Button>
             </div>
-          </div>
         </Grid>
         <Hidden mdDown={true}>
         <Grid md={3} lg={3.5} mdOffset={'auto'}>

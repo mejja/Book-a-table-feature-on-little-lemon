@@ -1,6 +1,6 @@
 import { Container, Typography } from '@mui/material';
 import './App.css';
-import ResponsiveAppBar from "./components/ResponsiveAppBar";
+import ResponsiveHeader from "./components/ResponsiveHeader";
 import Banner from "./components/Banner";
 import DishCard from "./components/DishCard";
 import Testimonials from "./components/Testimonials";
@@ -10,6 +10,7 @@ import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import About from './components/About';
+import Footer from './components/Footer';
 
 
 const theme = createTheme({
@@ -26,14 +27,14 @@ function App({dishes}) {
   return (
     <ThemeProvider theme={theme}>
     <div className="App">
-    < ResponsiveAppBar />
+    < ResponsiveHeader />
     < Banner />
     <Container>
       {menus.map((menu) => (
         <>
         <Stack
         direction={{xs: "column", sm: "column", md: "row"}}
-        spacing={{xs: 1, sm: 2, md: 32, lg: 70 }}
+        spacing={{xs: 1, sm: 2, md: 5, lg: 70 }}
         marginTop={20}
         marginBottom={15}>
         <Typography
@@ -44,10 +45,11 @@ function App({dishes}) {
         >
           {menu.name}
         </Typography>
-        <Button variant="contained" color="ochre" size="medium" 
-        style={{maxHeight: "4em", maxWidth: "4em", minWidth: "300px", minHeight: "4em", fontFamily: "Karla,sans-serif", fontSize: "18px", fontWeight: "800", borderRadius: "3em"}}>
+        <div id="onlinemenu-button">
+        <Button variant="contained" color="ochre" size="medium" >
         Online Menu
         </Button>
+        </div>
         </Stack>
         <Grid container spacing={5}>
           {menu.dishes.map((dish, index) => 
@@ -59,6 +61,7 @@ function App({dishes}) {
     </div>
     < Testimonials />
     <About />
+    <Footer/>
     </ThemeProvider>
 
   );

@@ -11,7 +11,7 @@ const DishCard = ({dish}) => {
       <Paper 
       sx={{borderTopLeftRadius: "10%" , borderTopRightRadius: "10%", backgroundColor: "#f2efef", boxShadow: "5px 10px 20px #ccc", marginBottom:"-0.2em", marginTop:"8em", width: "95%", margin: "-64px 16px 0"}}
       elevation={3}>
-        <img 
+        <img  id="dish-image"
         style={{borderTopLeftRadius: "10%", borderTopRightRadius: "10%", height: 300}}
         src={dish.image}
         alt="Menu Dish"

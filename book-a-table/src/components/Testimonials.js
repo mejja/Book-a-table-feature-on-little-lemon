@@ -10,7 +10,7 @@ import { Box, CardActionArea} from "@mui/material";
 export default function Testimonials() {
   return (
     <header >
-      <Box className="main" sx={{padding: 5}}>
+      <Box className="testimonial-box" sx={{padding: 5}}>
         <div className="testimonial-header">
           <h1 id="testimonial-heading">Testimonials</h1>
         </div>

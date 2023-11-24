@@ -20,7 +20,7 @@ const pages = ["Home", "About", "Menu", "Reservations", "Order Online", "Login"]
 // const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 
-export default function ResponsiveAppBar() {
+export default function ResponsiveHeader() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   // const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -122,7 +122,7 @@ export default function ResponsiveAppBar() {
           >
             Little Lemon
           </Typography> */}
-           <img src={logo} width="auto" height="auto" alt="logo" />
+           <img src={logo} width="auto" height="auto" alt="Primary logo" />
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex", margin: "0 4px" } }}>
             {/* {pages.map((page) => (
               <Button
