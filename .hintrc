@@ -8,7 +8,8 @@
       {
         "ignore": [
           "overflow: clip",
-          "overflow-clip-margin"
+          "overflow-clip-margin",
+          "text-align: -webkit-match-parent"
         ]
       }
     ]
