@@ -1,10 +1,11 @@
+import "../App.css";
 import React from 'react';
 import Button from '@mui/material/Button';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import "../App.css";
 import { Box } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
-import {makeStyles} from '@mui/material/styles';
+import Hidden from '@mui/material/Hidden';
+
 // Color theme function
 const theme = createTheme({
   palette: {
@@ -16,27 +17,14 @@ const theme = createTheme({
     }
   }
 })
-// Setting breakpoint function
-const useStyles = makeStyles((Theme) => ({
-  one: {
-      background: 'black',
-      [theme.breakpoints.down('md')]: {
-          display: 'none',
-      },
-  },
-  two: {
-      background: 'green'
-  }
-}))
 
 export default function Banner() {
-  const classes = useStyles();
   return (
     <ThemeProvider theme={theme}>
-    <header style={{ paddingLeft: 0}} >
+    <header>
       <Box
         className="main"
-        style={{ height: 500, backgroundColor: 'rgba(73, 94, 87)', paddingLeft: 30, paddingTop: 40, color: 'white'}}
+        style={{ height: 550, backgroundColor: 'rgba(73, 94, 87)', paddingLeft: 30, paddingTop: 40, color: 'white'}}
       >
         <Grid container spacing={{ xs: 2, md: 4, lg: 8 }} columns={{ xs: 4, sm: 8, md: 12 }}>
         <Grid xs={2} sm={4} md={4}>
@@ -51,12 +39,14 @@ export default function Banner() {
             </div>
           </div>
         </Grid>
-        <Grid xs={1} sm={2} md={2} mdOffset={'auto'} className={classes.one}>
+        <Hidden mdDown={true}>
+        <Grid md={3} lg={3.5} mdOffset={'auto'}>
         <div className='featured'>
             <img alt='featured Dish'
             src={require("../assets/images/restauranfood.jpg")}/>
           </div>
         </Grid>
+        </Hidden>
       </Grid>
       </Box>
     </header>

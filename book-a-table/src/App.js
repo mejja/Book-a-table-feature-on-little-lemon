@@ -9,7 +9,7 @@ import menus from  "./data.json";
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import OffsetGrid from './components/OffsetGrid';
+import About from './components/About';
 
 
 const theme = createTheme({
@@ -33,9 +33,9 @@ function App({dishes}) {
         <>
         <Stack
         direction={{xs: "column", sm: "column", md: "row"}}
-        spacing={{xs: 1, sm: 2, md: 32, lg: 72,  }}
-        marginTop={25}
-        marginBottom={20}>
+        spacing={{xs: 1, sm: 2, md: 32, lg: 70 }}
+        marginTop={20}
+        marginBottom={15}>
         <Typography
         variant="h1"
         component="h1"
@@ -45,9 +45,9 @@ function App({dishes}) {
           {menu.name}
         </Typography>
         <Button variant="contained" color="ochre" size="medium" 
-        style={{maxHeight: "4em", maxWidth: "4em", minWidth: "350px", minHeight: "4em", fontFamily: "Karla,sans-serif", fontSize: "18px", fontWeight: "800", borderRadius: "3em"}}>
+        style={{maxHeight: "4em", maxWidth: "4em", minWidth: "300px", minHeight: "4em", fontFamily: "Karla,sans-serif", fontSize: "18px", fontWeight: "800", borderRadius: "3em"}}>
         Online Menu
-          </Button>
+        </Button>
         </Stack>
         <Grid container spacing={5}>
           {menu.dishes.map((dish, index) => 
@@ -58,7 +58,7 @@ function App({dishes}) {
     </Container>
     </div>
     < Testimonials />
-    <OffsetGrid />
+    <About />
     </ThemeProvider>
 
   );
