@@ -49,14 +49,13 @@
     display: flex;
     flex-Grow: 1;
     margin-Top: 1;
-    background-Color: "white";
+    background-Color: "#495e57";
     height: 400;
-    border: 10;
     border-Color: "#495e57" ;
 }
 
 @media (max-width: 800px){
-    .socials, .contact, .navigation, .footer-img {
+    .socials, .contact, .navigation {
         display: flex;
         justify-content: center;
         margin-left: 0;
@@ -65,21 +64,20 @@
     }
     }
     .socials, .contact, .navigation{
-        margin: 7em 1em 1em;
+        margin: 2em 6em 2em;
         display: flex;
         flex-direction: row;
     }
     #nav, .a{
         color: #000;
         font-family: Karla,sans-serif;
-        font-weight: 800;
-        font-weight: normal;
+        font-weight: 900;
+        font-weight: bold;
         list-style: none;
         text-decoration: none;
     }
     h5{
     font-size: 30px;
-    margin-top: -2.5em;
     display: block;
     margin-block-start: 1.67em;
     margin-block-end: 1.67em;
@@ -89,9 +87,10 @@
     list-style-type: none;
 }
 li {
+    margin: 10px 0;
     text-align: -webkit-match-parent;
     list-style-type: none;
-    font-weight:normal;
+    font-weight:bold;
 }
 /*  ResponsiveHeader Styling*/
 /* Specials Styling */

@@ -1,14 +1,15 @@
 import * as React from 'react';
 import "../App.css";
 import logo from "../assets/Logo.svg";
+import { Grid } from '@mui/material';
 
 
 
 
 export default function Footer() {
   return (
-    <div className='footer'>
-            <div className="footer-img">
+    <Grid className='footer' style={{color:"rgba(73, 94, 87)"}}>
+            <div className="navigation">
               <img
               src={logo} alt="Secondary logo"/>
             </div>
@@ -65,6 +66,6 @@ export default function Footer() {
             </div>
             <div>
             </div>
-    </div>
+    </Grid>
   );
 }
