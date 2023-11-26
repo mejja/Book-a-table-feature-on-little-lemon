@@ -9,7 +9,7 @@ import { red } from '@mui/material/colors';
 export default function About() {
   return (
     <Box 
-     sx={{ flexGrow: 1, height: 400, borderBottom:10}}>
+     sx={{ flexGrow: 1, height: 400, borderBottom:5}}>
       <Grid container spacing={{ xs: 2, md: 4, lg: 8 }} columns={{ xs: 4, sm: 8, md: 12 }}>
           <Grid xs={2} sm={4} md={8}>
             <h1 style={{fontSize:50}}>

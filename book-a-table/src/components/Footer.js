@@ -8,7 +8,7 @@ import { Box } from '@mui/material';
 
 export default function Footer() {
   return (
-    <Box className='footer' sx={{borderTop:10, borderColor: "rgba(73, 94, 87)"}}>
+    <Box className='footer' sx={{borderTop:5, borderColor: "rgba(73, 94, 87)"}}>
             <div className="navigation">
               <img
               src={logo} alt="Secondary logo"/>
