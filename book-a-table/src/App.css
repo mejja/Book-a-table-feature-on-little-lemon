@@ -48,9 +48,8 @@
     margin-top: 100;
     display: flex;
     flex-Grow: 1;
-    margin-Top: 1;
-    background-Color: "#495e57";
     height: 400;
+    border-top: 10px;;
     border-Color: "#495e57" ;
 }
 
