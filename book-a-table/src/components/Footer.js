@@ -1,14 +1,14 @@
 import * as React from 'react';
 import "../App.css";
 import logo from "../assets/Logo.svg";
-import { Box } from '@mui/material';
+import { Grid } from '@mui/material';
 
 
 
 
 export default function Footer() {
   return (
-    <Box className='footer' sx={{borderTop:5, borderColor: "rgba(73, 94, 87)"}}>
+    <Grid className='footer' sx={{borderTop:5, borderColor: "rgba(73, 94, 87)"}}>
             <div className="navigation">
               <img
               src={logo} alt="Secondary logo"/>
@@ -66,6 +66,6 @@ export default function Footer() {
             </div>
             <div>
             </div>
-    </Box>
+    </Grid>
   );
 }

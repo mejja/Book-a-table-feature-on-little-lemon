@@ -1,4 +1,85 @@
 /* About Styling */
+@media (max-width: 800px){
+.about {
+    flex-wrap: wrap;
+}
+}
+@media (max-width: 800px){
+.owners {
+    margin: 3em;
+    width: 100%;
+}
+}
+.about {
+    display: flex;
+    height: auto;
+    padding: 3em 0;
+    width: 100%;
+}
+.about-content{
+    margin-left: 7em;
+    margin-right: 5em;
+    width: 40%;
+    display: block;
+}
+.about-content h4{
+    color: #000;
+    font-size: 60px;
+    font-weight: 700;
+    font-family: Markazi Text,serif;
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0;
+}
+
+.about-content h5{
+    color: #000;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: -2.5em;
+    font-family: Markazi Text,serif;
+    margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.about-content p {
+    color: #000;
+    font-family: karla,sans-serif;
+    font-size: 18px;
+    line-height: 1.7em;
+    margin-top: -1em;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-end: 0px;
+
+}
+
+.owners{
+    width: 50%;
+    display: block;
+}
+#chefs, #restaurant {
+    box-shadow:  3px 3px 15px rgb(0, 0, 0,.2);
+    height: 60%;
+}
+#chefs {
+    margin-left: 10em;
+    margin-top: 1em;
+    width: 50%;
+}
+#restaurant{
+    margin-left: 2em;
+    margin-top: -10em;
+    width: 40%;
+}
+img{
+    overflow-clip-margin: content-box;
+    overflow:clip;
+}
 
 /* Banner Styling */
 .banner-box {

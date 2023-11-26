@@ -1,25 +1,26 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Unstable_Grid2';
-import { red } from '@mui/material/colors';
+import "../App.css";
 
 
 
 
 export default function About() {
   return (
-    <Box 
-     sx={{ flexGrow: 1, height: 400, borderBottom:5}}>
-      <Grid container spacing={{ xs: 2, md: 4, lg: 8 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-          <Grid xs={2} sm={4} md={8}>
-            <h1 style={{fontSize:50}}>
+            <div className='about'>
+            <div className='about-content'>
+            <h4>
               Little Lemon
-            </h1>
-            <h2>Chicago</h2>
-          </Grid>
-          <Grid xs={1} sm={2} md={2} mdOffset={'auto'}>
-          </Grid>
-      </Grid>
-    </Box>
+            </h4>
+            <h5 >Chicago</h5>
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at ex leo. Maecenas enim sem, laoreet at nulla ac, luctus scelerisque massa. Praesent ut molestie nisi. Aliquam arcu lorem, auctor condimentum blandit id, lobortis in nisi. Ut diam justo, euismod in accumsan id, vehicula sit amet tellus. Pellentesque porttitor elit lacus, vitae lacinia magna ultricies quis. Etiam vitae tellus et mi hendrerit consequat. In dictum ligula in elit euismod malesuada. Curabitur varius augue id tempus ultricies. Mauris suscipit porta odio, et pretium nibh scelerisque ut.
+            </p>
+            </div>
+            <div className='owners'>
+            <img id='chefs'src={require('../assets/images/owners.jpg')} alt='Male Owners'/>
+            <img id='restaurant' src={require('../assets/images/restaurant.jpg')} alt='Female Owners' />
+            </div>
+            </div>
+    
   );
 }
