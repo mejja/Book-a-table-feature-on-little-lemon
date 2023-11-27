@@ -7,6 +7,7 @@
         "title": "Greek Salad",
         "text":"The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.",
         "delivery": "Order Delivery",
+        "price":"12.99",
         "image": "images/greek_salad.png"
         },
         {
@@ -14,6 +15,7 @@
             "title": "Bruschetta",
             "text": " Our Bruschetta is made from homemade grilled bread that has been smeared with garlic and seasoned with salt and olive oil. Topped with fresh vegetables.",
             "delivery": "Order Delivery",
+            "price":"6.99",
             "image": "images/bruchetta.png"
         },
         {
@@ -21,6 +23,7 @@
             "title": "Lemon Cake",
             "text": "This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.",
             "delivery":"Order Delivery",
+            "price":"5.00",
             "image": "images/lemon_dessert.png"
         }
 

@@ -17,9 +17,12 @@ const DishCard = ({dish}) => {
         alt="Menu Dish"
         className="img"
         />
-        <Box padding={2}>
-        <Typography  variant="h3" component="h3">
+        <Box padding={2} sx={{display:"flex", flexWrap:"wrap"}}>
+        <Typography  variant="h5" component="h5" sx={{fontWeight:"bold"}}>
          {dish.title}
+        </Typography>
+        <Typography variant="h5" component="h5" sx={{color:"#d50000", alignSelf:"end", marginLeft:"auto", fontWeight:"bold" }}>
+          ${dish.price}
         </Typography>
         </Box>
         <Box

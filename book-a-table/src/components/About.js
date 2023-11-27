@@ -1,11 +1,13 @@
 import * as React from 'react';
 import "../App.css";
+import { Box } from '@mui/material';
 
 
 
 
 export default function About() {
   return (
+    <Box sx={{borderBottom:7}}>
             <div className='about'>
             <div className='about-content'>
             <h4>
@@ -21,6 +23,7 @@ export default function About() {
             <img id='restaurant' src={require('../assets/images/restaurant.jpg')} alt='Female Owners' />
             </div>
             </div>
+            </Box>
     
   );
 }

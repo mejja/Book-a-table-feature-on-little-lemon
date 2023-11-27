@@ -8,7 +8,7 @@ import { Grid } from '@mui/material';
 
 export default function Footer() {
   return (
-    <Grid className='footer' sx={{borderTop:5, borderColor: "rgba(73, 94, 87)"}}>
+    <Grid className='footer' sx={{borderTop:7, borderColor: "rgba(73, 94, 87)"}}>
             <div className="navigation">
               <img
               src={logo} alt="Secondary logo"/>
