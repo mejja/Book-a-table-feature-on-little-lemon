@@ -84,6 +84,18 @@ img{
 }
 
 /* Banner Styling */
+@media(max-width: 800px){
+    .banner-content{
+        display: flex;
+        width: auto;
+        margin: 0;
+        padding: 0;
+        flex-wrap: wrap;
+        flex-direction: row;
+        height:auto;
+        width: fit-content;
+    }
+}
 .banner-box {
     height: 550;
     background-Color: #495e57;
@@ -118,7 +130,6 @@ img{
     vertical-align: top;
 }
 /* Footer Styling */
-
 .footer-img {
     margin: 0;
     text-align: center;
@@ -182,6 +193,14 @@ li {
     font-weight:bold;
 }
 /*  ResponsiveHeader Styling*/
+@media (max-width: 1050){
+.logo img {
+    width: 75%;
+}
+}
+.logo img{
+    height: auto;
+}
 /* Specials Styling */
 .onlinemenu-button button{
     height: 3em;

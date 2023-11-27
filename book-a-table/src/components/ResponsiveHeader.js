@@ -122,8 +122,10 @@ export default function ResponsiveHeader() {
           >
             Little Lemon
           </Typography> */}
+          <div className="primary-logo">
            <img src={logo} width="auto" height="auto" alt="Primary logo" />
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex", margin: "0 4px" } }}>
+           </div>
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex", margin: "0 30px" } }}>
             {/* {pages.map((page) => (
               <Button
                 key={page}
@@ -189,13 +191,14 @@ export default function ResponsiveHeader() {
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
-              sx={{
+              sx={{color:"red",
                 display: { xs: "block", md: "none" },
               }}
             >
+              {/* Page display on small screen on collapsable menu */}
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography textAlign="center" >{page}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -219,12 +222,12 @@ export default function ResponsiveHeader() {
           >
             LOGO3
           </Typography> */}
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex",} }}>
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{my: 8, color: "black", display: "block", }}
+                sx={{my: 8, color: "black", fontWeight:800, fontFamily:"Karla,sans-serif" ,display: "block", marginX: "1.5rem", alignItems:"self-end"}}
               >
                 {page}
               </Button>
