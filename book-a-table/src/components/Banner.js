@@ -31,12 +31,12 @@ export default function Banner() {
               <h2>Chicago</h2>
               <h2 style={{marginTop: 40, marginBottom:40, maxWidth:400}} textArea>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</h2>
               <Button variant="contained" color="ochre" size="medium"
-              style={{maxHeight: "4em",  minWidth: "350px", minHeight: "4em", fontFamily: "Karla,sans-serif", fontSize: "18px", fontWeight: "800", borderRadius: "3em"}}
+              style={{maxHeight: "4em",  minWidth: "300px", minHeight: "4em", fontFamily: "Karla,sans-serif", fontSize: "18px", fontWeight: "800", borderRadius: "3em"}}
               >Reserve a Table</Button>
             </div>
         </Grid>
         <Hidden mdDown={true}>
-        <Grid md={3} lg={3.5} mdOffset={'auto'}>
+        <Grid md={3} lg={4} mdOffset={'auto'}>
         <div className='featured'>
             <img alt='featured Dish'
             src={require("../assets/images/restauranfood.jpg")}/>

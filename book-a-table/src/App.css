@@ -103,6 +103,13 @@ img{
     align-self: flex-end;
 }
 /* Dishcard Styling */
+@media (max-width: 800px){
+    .dishcard{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+}
 #dish-image {
     width: 100%;
     height: 15rem;
@@ -176,11 +183,10 @@ li {
 }
 /*  ResponsiveHeader Styling*/
 /* Specials Styling */
-#onlinemenu-button button{
+.onlinemenu-button button{
     height: 3em;
     width: 12em;
     border: none;
-    margin: 1em;
     padding-block: 1px;
     padding-inline: 6px;
     font-Family: "Karla,sans-serif";
