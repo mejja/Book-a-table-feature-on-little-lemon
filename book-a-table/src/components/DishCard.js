@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 
 const DishCard = ({dish}) => {
     return( 
-    <Grid item xs={4} marginY={2} sx={{ flexGrow: 1 }} container spacing={2}>
+    <Grid item xs={4} marginY={2} container spacing={2}>
       <Paper 
       sx={{borderTopLeftRadius: "10%" , borderTopRightRadius: "10%", backgroundColor: "#f2efef", boxShadow: "5px 10px 20px #ccc", marginBottom:"-0.2em", marginTop:"8em", width: "95%", margin: "-64px 16px 0"}}
       elevation={3}>
@@ -45,7 +45,6 @@ const DishCard = ({dish}) => {
         >
         <Button color="primary" size="large" style={{marginBottom: "20"}}>{dish.delivery}</Button>
         </Box>
-        
       </Paper>
     </Grid>
     );
