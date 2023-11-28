@@ -9,7 +9,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import logo from "../assets/Logo.svg";
+import logo from "../assets/logo.png";
 
 // import AdbIcon from "@mui/icons-material/Adb";
 // import Avatar from "@mui/material/Avatar";
@@ -125,7 +125,7 @@ export default function ResponsiveHeader() {
           <div className="primary-logo">
            <img src={logo} width="auto" height="auto" alt="Primary logo" />
            </div>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex", margin: "0 30px" } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex", flexDirection:"row", margin: "0 20px" } }}>
             {/* {pages.map((page) => (
               <Button
                 key={page}
@@ -227,7 +227,7 @@ export default function ResponsiveHeader() {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{my: 8, color: "black", fontWeight:800, fontFamily:"Karla,sans-serif" ,display: "block", marginX: "1.5rem", alignItems:"self-end"}}
+                sx={{my: 7, color: "black", fontWeight:800, fontFamily:"Karla,sans-serif" ,display: "block", marginX: "1.5rem", alignItems:"self-end", marginLeft:"3rem"}}
               >
                 {page}
               </Button>

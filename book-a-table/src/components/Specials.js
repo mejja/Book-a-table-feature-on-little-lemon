@@ -17,7 +17,7 @@ export default function Specials() {
     {menus.map((menu) => (
       <>
       <Stack
-      direction={{xs: "column", sm: "column", md: "row"}}
+      direction={{xs: "column", sm: "column", md: "row", lg:"row"}}
       spacing={{xs: 1, sm: 2, md: 5, lg: 70 }}
       marginTop={20}
       marginBottom={15}>
@@ -36,10 +36,12 @@ export default function Specials() {
       </Button>
       </div>
       </Stack>
-      <Grid container spacing={5}>
+      <div >
+      <Stack container spacing={0} direction={{xs: "column", sm: "column", md: "row", lg:"row",}}>
         {menu.dishes.map((dish, index) => 
         <DishCard dish={dish} key={index}/>)}
-      </Grid>
+      </Stack>
+      </div>
       </>
     ))}
   </Container>

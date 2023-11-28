@@ -7,9 +7,10 @@ import Button from '@mui/material/Button';
 
 const DishCard = ({dish}) => {
     return( 
-    <Grid item xs={4} marginY={2} container spacing={2}>
+      <div className="dishcard">
+    <Grid item xs={15} marginY={2} container spacing={1} width={"auto"} >
       <Paper 
-      sx={{borderTopLeftRadius: "10%" , borderTopRightRadius: "10%", backgroundColor: "#f2efef", boxShadow: "5px 10px 20px #ccc", marginBottom:"-0.2em", marginTop:"8em", width: "95%", margin: "-64px 16px 0"}}
+      sx={{borderTopLeftRadius: "10%" , borderTopRightRadius: "10%", backgroundColor: "#f2efef", boxShadow: "5px 10px 20px #ccc", marginBottom:"-60em", marginTop:"8em", margin: "-64px 35px 0", width:"20em", height:"600px"}}
       elevation={3}>
         <img  id="dish-image"
         style={{borderTopLeftRadius: "10%", borderTopRightRadius: "10%", height: 300}}
@@ -37,16 +38,16 @@ const DishCard = ({dish}) => {
         </Box>
         <Box 
           paddingX={2}
-          marginBottom={2}
           sx={{
           display: "flex",
           alignItems: "center"
           }}
         >
-        <Button color="primary" size="large" style={{marginBottom: "20"}}>{dish.delivery}</Button>
+        <Button color="primary" size="large">{dish.delivery}</Button>
         </Box>
       </Paper>
     </Grid>
+    </div>
     );
 };
 
