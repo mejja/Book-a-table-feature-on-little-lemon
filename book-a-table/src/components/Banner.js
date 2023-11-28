@@ -5,6 +5,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Box } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
 import Hidden from '@mui/material/Hidden';
+import BasicModal from './BasicModal';
 
 // Color theme function
 const theme = createTheme({
@@ -30,10 +31,10 @@ export default function Banner() {
               <h1  style={{color: 'yellow', fontSize:50}}>Little Lemon</h1>
               <h2>Chicago</h2>
               <h2 style={{marginTop: 40, marginBottom:40, maxWidth:400}} textArea>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</h2>
-              <Button variant="contained" color="ochre" size="medium"
+              <BasicModal />
+              {/* <Button variant="contained" color="ochre" size="medium"
               style={{maxHeight: "4em",  minWidth: "300px", minHeight: "4em", fontFamily: "Karla,sans-serif", fontSize: "18px", fontWeight: "800", borderRadius: "3em"}}
-             
-              >Reserve a Table</Button>
+              >Reserve a Table</Button> */}
             </div>
         </Grid>
         <Hidden mdDown={true}>
@@ -44,6 +45,7 @@ export default function Banner() {
           </div>
         </Grid>
         </Hidden>
+        
       </Grid>
       </Box>
     </header>

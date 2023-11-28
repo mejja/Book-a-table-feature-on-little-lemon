@@ -6,7 +6,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import About from './components/About';
 import Footer from './components/Footer';
 import Specials from './components/Specials'
-import BasicModal from './components/BasicModal';
+
 
 
 const theme = createTheme({
@@ -25,7 +25,6 @@ function App({dishes}) {
     <div className="App">
     < ResponsiveHeader />
     < Banner />
-    <BasicModal />
     < Specials />
     </div>
     < Testimonials />

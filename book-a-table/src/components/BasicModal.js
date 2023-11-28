@@ -9,10 +9,12 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 400,
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
-  boxShadow: 24,
+  width: '25em',
+  minHeight:'38em',
+  bgcolor: '#f2efef',
+  border: '10px solid #495e57',
+  boxShadow: 30,
+  borderRadius:5,
   p: 4,
 };
 
@@ -23,7 +25,9 @@ export default function BasicModal() {
 
   return (
     <div>
-      <Button onClick={handleOpen}>Reservations</Button>
+      <Button variant="contained" color="ochre" size="medium"
+       style={{maxHeight: "4em",  minWidth: "300px", minHeight: "4em", fontFamily: "Karla,sans-serif", fontSize: "18px", fontWeight: "800", borderRadius: "3em"}}
+      onClick={handleOpen}>RESERVE A TABLE</Button>
       <Modal
         open={open}
         onClose={handleClose}
@@ -31,11 +35,12 @@ export default function BasicModal() {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            Text in a modal
+          <Box sx={{marginTop:-4, background:"#495e57",marginX:-5}}>
+          <Typography id="modal-modal-title" variant="h3" component="h2" textAlign={"center"} color={'#f4ce14'} fontWeight={"bold"}>
+           RESERVE NOW
           </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 50 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+          </Box>
+          <Typography id="modal-modal-description" sx={{ mt: 5 }}>
           </Typography>
         </Box>
       </Modal>
