@@ -280,3 +280,9 @@ li {
     padding-top: 40;
     color: white;
 }
+
+/* ReserveForm Styling */
+.customername-label{
+    font-size: 30;
+    color: #f4ce14;
+}

@@ -3,13 +3,14 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import ReserveForm from './ReserveForm';
 
 const style = {
   position: 'absolute',
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: '25em',
+  width: '27em',
   minHeight:'38em',
   bgcolor: '#f2efef',
   border: '10px solid #495e57',
@@ -18,7 +19,7 @@ const style = {
   p: 4,
 };
 
-export default function BasicModal() {
+export default function ReserveTableModal() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -40,8 +41,7 @@ export default function BasicModal() {
            RESERVE NOW
           </Typography>
           </Box>
-          <Typography id="modal-modal-description" sx={{ mt: 5 }}>
-          </Typography>
+          <ReserveForm />
         </Box>
       </Modal>
     </div>
