@@ -2,7 +2,9 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 import GroupsIcon from '@mui/icons-material/Groups';
-
+import { styled } from '@mui/material/styles';
+import MuiInput from '@mui/material/Input';
+import { Grid } from '@mui/material';
 
 const people = [
   {
@@ -50,25 +52,66 @@ const people = [
     label: '100',
   },
 ];
+const Input = styled(MuiInput)`
+  width: 42px;
+`;
 
 
 function valuetext(value) {
   return  `${value}`;
 }
-
 export default function PeopleSlider() {
+  const [value, setValue] = React.useState(1);
+
+  const handleSliderChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  const handleInputChange = (event) => {
+    setValue(event.target.value === '' ? 0 : Number(event.target.value));
+  };
+
+  const handleBlur = () => {
+    if (value < 0) {
+      setValue(0);
+    } else if (value > 100) {
+      setValue(100);
+    }
+  };
   return (
-   <Box sx={{flexGrow:1, color:"#000", textEmphasisColor:"#000" }}>
-          <GroupsIcon fontSize='large' sx={{marginBottom:-5}}/>
+   <Box sx={{flexGrow:1 }}>
+          <Grid   container spacing={2} alignItems={'center'}>
+          <Grid item >
+          <GroupsIcon fontSize='large' />
+          </Grid>
+          <Grid item>
           <Slider
-          textEmphasisColor="#000"
-            aria-label="Always visible"
+            value={typeof value === 'number' ? value : 1}
+            onChange={handleSliderChange}
+            arialabel="Always visible"
             defaultValue={1}
             getAriaValueText={valuetext}
             step={1}
             marks={people}
             valueLabelDisplay="auto"
-            sx={{ color: "#f4ce14", border: 4, borderColor: "#f4ce14", padding: 0, marginTop: 2, width:"85%", marginLeft:7}} />
+            sx={{ color: "#f4ce14", border: 4, borderColor: "#f4ce14", padding: 0, width:"19em", marginTop: 1, }} />
+             </Grid>
+             <Grid item>
+             <Input
+            value={value}
+            size="small"
+            onChange={handleInputChange}
+            onBlur={handleBlur}
+            inputProps={{
+              step: 1,
+              min: 1,
+              max: 100,
+              type: 'number',
+              'aria-labelledby': 'input-slider',
+            }}
+          />
+          </Grid>
+          </Grid>
     </Box>
   );
 }

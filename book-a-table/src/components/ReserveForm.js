@@ -31,7 +31,7 @@ export default function ReserveForm() {
             />
         </Grid>
         </Grid>
-        <Typography sx={{marginBottom:-2}}>
+        <Typography sx={{marginBottom:-2, marginTop:-1}}>
         <FormLabel sx={{fontFamily:"Markazi Text,serif", fontSize:"1.5em",fontWeight:"bold",color:"#000"}}>E-mail:</FormLabel>
         </Typography>
     <Grid item  sx={{marginY:2}} marginX={0}>
@@ -42,19 +42,22 @@ export default function ReserveForm() {
              label="name@email.com"
             />
     </Grid>
-    <Typography>
+    <Typography sx={{marginTop:-1}}>
         <FormLabel sx={{fontFamily:"Markazi Text,serif", fontSize:"1.5em",fontWeight:"bold", color:"#000"}}>Date & Time:</FormLabel>
         </Typography>
         < BasicDateTimePicker />
-        <Typography sx={{marginBottom:-2}} >
+        <Typography sx={{marginBottom:-3, marginTop:1}} >
         <FormLabel sx={{fontFamily:"Markazi Text,serif", fontSize:"1.5em",fontWeight:"bold", color:"#000"}}>Number of People:</FormLabel>
         </Typography>
         < PeopleSlider />
-        <Typography sx={{marginTop:2}} >
-        <FormLabel sx={{fontFamily:"Markazi Text,serif", fontSize:"1.5em",fontWeight:"bold", color:"#000"}}>Occasion</FormLabel>
+        <Typography sx={{marginTop:3}} >
+        <FormLabel sx={{fontFamily:"Markazi Text,serif", fontSize:"1.5em",fontWeight:"bold", color:"#000"}}>Occasion:</FormLabel>
         </Typography>
         < OccassionDropDown />
-        <TextField sx={{marginTop:1}} id="outlined-basic" label="comments(optional)" variant="outlined"  fullWidth="true"/>
+        <Typography>
+        <FormLabel sx={{fontFamily:"Markazi Text,serif", fontSize:"1.5em",fontWeight:"bold",color:"#000"}}>Notes:</FormLabel>
+        </Typography>
+        <TextField sx={{marginTop:1}} id="outlined-basic" multiline maxRows={4} label="comments(optional)" variant="outlined"  fullWidth="true"/>
         <FormGroup>
       <FormControlLabel required control={<Checkbox color='success' />}label="I agree to Little's Lemon terms & condition" />
     </FormGroup>

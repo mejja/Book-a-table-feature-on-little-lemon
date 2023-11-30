@@ -9,7 +9,7 @@ import Stack from '@mui/material/Stack';
 export default function CustomDateTimePicker() {
 
   const [dateWithInitialValue, setDateWithInitialValue] = React.useState(
-    dayjs('2023-11-29T00:00'),
+    dayjs(new Date()),
   );
 
   return (
@@ -23,7 +23,7 @@ export default function CustomDateTimePicker() {
           required
           label="Required"
           onError={console.log}
-          minDate={dayjs('2023-11-29T00:00')}
+          minDate={dayjs(new Date())}
           inputFormat="YYYY/MM/DD hh:mm a"
           mask="____/__/__ __:__ _M"
           renderInput={(params) => <TextField {...params} />}
