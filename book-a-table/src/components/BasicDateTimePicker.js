@@ -21,7 +21,7 @@ export default function CustomDateTimePicker() {
             setDateWithInitialValue(newValue);
           }}
           required
-          label="Select Date & Time"
+          label="Required"
           onError={console.log}
           minDate={dayjs('2023-11-29T00:00')}
           inputFormat="YYYY/MM/DD hh:mm a"

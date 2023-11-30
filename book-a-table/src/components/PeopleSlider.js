@@ -1,8 +1,10 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
+import GroupsIcon from '@mui/icons-material/Groups';
 
-const marks = [
+
+const people = [
   {
     value: 1,
     label: '1',
@@ -51,21 +53,22 @@ const marks = [
 
 
 function valuetext(value) {
-  return   `${value}`;
+  return  `${value}`;
 }
 
 export default function PeopleSlider() {
   return (
-    <Box sx={{ width: 400 }}>
-      <Slider
-        aria-label="Always visible"
-        defaultValue={1}
-        getAriaValueText={valuetext}
-        step={1}
-        marks={marks}
-        valueLabelDisplay="on"
-        sx={{color:"#f4ce14", border:4, borderColor:"#f4ce14", padding:0, marginTop:2}}
-      />
+   <Box sx={{flexGrow:1, color:"#000", textEmphasisColor:"#000" }}>
+          <GroupsIcon fontSize='large' sx={{marginBottom:-5}}/>
+          <Slider
+          textEmphasisColor="#000"
+            aria-label="Always visible"
+            defaultValue={1}
+            getAriaValueText={valuetext}
+            step={1}
+            marks={people}
+            valueLabelDisplay="auto"
+            sx={{ color: "#f4ce14", border: 4, borderColor: "#f4ce14", padding: 0, marginTop: 2, width:"85%", marginLeft:7}} />
     </Box>
   );
 }

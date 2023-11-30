@@ -8,8 +8,9 @@ import Paper from '@mui/material/Paper';
 import Popper from '@mui/material/Popper';
 import MenuItem from '@mui/material/MenuItem';
 import MenuList from '@mui/material/MenuList';
+import CelebrationIcon from '@mui/icons-material/Celebration';
 
-const options = ['Dinner Occassions', 'Birthday Occassions', 'Wedding Occassions', 'Others Occassions'];
+const options = ['Dinner Events', 'Birthday Parties', 'Wedding Ceremonies', 'Others Occassions'];
 
 export default function OccassionDropDown() {
   const [open, setOpen] = React.useState(false);
@@ -38,11 +39,15 @@ export default function OccassionDropDown() {
   };
 
   return (
+   
     <React.Fragment>
-      <ButtonGroup variant="contained" ref={anchorRef} fullWidth="true" aria-label="split button">
-        <Button onClick={handleClick}>{options[selectedIndex]}</Button>
+       <CelebrationIcon  fontSize='large'sx={{marginBottom:-1}}/>
+      <ButtonGroup variant="contained" ref={anchorRef}  aria-label="split button" sx={{alignContent:"flex-end", marginLeft:2}}>
+        <Button color='success' sx={{backgroundColor:"#495e57"}} onClick={handleClick}>{options[selectedIndex]}</Button>
         <Button
-          size="medium"
+          sx={{backgroundColor:"#495e57"}}
+          color='success'
+          size="large"
           aria-controls={open ? 'split-button-menu' : undefined}
           aria-expanded={open ? 'true' : undefined}
           aria-label="select merge strategy"
