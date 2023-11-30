@@ -12,48 +12,45 @@ const people = [
     label: '1',
   },
   {
+    value: 2,
+    label: '2',
+  },
+  {
+    value: 3,
+    label: '4',
+  },
+  {
+    value: 4,
+    label: '4',
+  },
+  {
+    value: 5,
+    label: '5',
+  },
+  {
+    value: 6,
+    label: '6',
+  },
+  {
+    value: 7,
+    label: '7',
+  },
+  {
+    value: 8,
+    label: '8',
+  },
+  {
+    value: 9,
+    label: '9',
+  },
+  {
     value: 10,
     label: '10',
   },
-  {
-    value: 20,
-    label: '20',
-  },
-  {
-    value: 30,
-    label: '30',
-  },
-  {
-    value: 40,
-    label: '40',
-  },
-  {
-    value: 50,
-    label: '50',
-  },
-  {
-    value: 60,
-    label: '60',
-  },
-  {
-    value: 70,
-    label: '70',
-  },
-  {
-    value: 80,
-    label: '80',
-  },
-  {
-    value: 90,
-    label: '90',
-  },
-  {
-    value: 100,
-    label: '100',
-  },
 ];
+// input field size
 const Input = styled(MuiInput)`
-  width: 42px;
+ width: 42px;
 `;
 
 
@@ -74,13 +71,13 @@ export default function PeopleSlider() {
   const handleBlur = () => {
     if (value < 0) {
       setValue(0);
-    } else if (value > 100) {
-      setValue(100);
+    } else if (value > 10) {
+      setValue(10);
     }
   };
   return (
    <Box sx={{flexGrow:1 }}>
-          <Grid   container spacing={2} alignItems={'center'}>
+          <Grid   container spacing={2} >
           <Grid item >
           <GroupsIcon fontSize='large' />
           </Grid>
@@ -91,6 +88,7 @@ export default function PeopleSlider() {
             arialabel="Always visible"
             defaultValue={1}
             getAriaValueText={valuetext}
+            max={10}
             step={1}
             marks={people}
             valueLabelDisplay="auto"
@@ -99,13 +97,13 @@ export default function PeopleSlider() {
              <Grid item>
              <Input
             value={value}
-            size="small"
+            size="large"
             onChange={handleInputChange}
             onBlur={handleBlur}
             inputProps={{
               step: 1,
               min: 1,
-              max: 100,
+              max: 10,
               type: 'number',
               'aria-labelledby': 'input-slider',
             }}

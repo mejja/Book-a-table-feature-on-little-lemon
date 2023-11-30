@@ -1,4 +1,4 @@
-import { FormLabel, Grid, TextField, Typography } from '@mui/material'
+import { FormLabel, Grid, TextField, Typography, Box } from '@mui/material'
 import React from 'react'
 import "../App.css";
 import BasicDateTimePicker from "./BasicDateTimePicker";
@@ -11,7 +11,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 
 export default function ReserveForm() {
   return (
-   <form>
+   <form id='reservation-form'>
     <Typography sx={{marginBottom:-2}}>
     <FormLabel sx={{fontFamily:"Markazi Text,serif", fontSize:"1.5em", fontWeight:"bold",color:"#000"}}>Customer's Name:</FormLabel>
     </Typography>
@@ -21,6 +21,9 @@ export default function ReserveForm() {
              required
              id="outlined-required"
              label="First"
+             helperText="This Field can't be empty."
+             variant="filled"
+             size="small"
             />
         </Grid>
         <Grid item xs={6} marginX={0}>
@@ -28,6 +31,9 @@ export default function ReserveForm() {
              required
              id="outlined-required"
              label="Last"
+             helperText="This Field can't be empty."
+             variant="filled"
+             size="small"
             />
         </Grid>
         </Grid>
@@ -39,31 +45,49 @@ export default function ReserveForm() {
              required
              fullWidth="true"
              id="outlined-required"
-             label="name@email.com"
+             label="name@domain.com"
+             helperText="This Field can't be empty." 
+             variant="filled"
+             size="small"
             />
     </Grid>
     <Typography sx={{marginTop:-1}}>
-        <FormLabel sx={{fontFamily:"Markazi Text,serif", fontSize:"1.5em",fontWeight:"bold", color:"#000"}}>Date & Time:</FormLabel>
+        <FormLabel id='Data&Time-label' sx={{fontFamily:"Markazi Text,serif", fontSize:"1.5em",fontWeight:"bold", color:"#000"}}>Date & Time:</FormLabel>
         </Typography>
+        {/* Reduced date picker width */}
+        <Box width={"80%"}>
         < BasicDateTimePicker />
+        </Box>
         <Typography sx={{marginBottom:-3, marginTop:1}} >
-        <FormLabel sx={{fontFamily:"Markazi Text,serif", fontSize:"1.5em",fontWeight:"bold", color:"#000"}}>Number of People:</FormLabel>
+        <FormLabel  id='numberOfPeopla-label' sx={{fontFamily:"Markazi Text,serif", fontSize:"1.5em",fontWeight:"bold", color:"#000"}}>Number of People:</FormLabel>
         </Typography>
         < PeopleSlider />
         <Typography sx={{marginTop:3}} >
-        <FormLabel sx={{fontFamily:"Markazi Text,serif", fontSize:"1.5em",fontWeight:"bold", color:"#000"}}>Occasion:</FormLabel>
+        <FormLabel id='occasionDropDown-label' sx={{fontFamily:"Markazi Text,serif", fontSize:"1.5em",fontWeight:"bold", color:"#000"}}>Occasion:</FormLabel>
         </Typography>
         < OccassionDropDown />
         <Typography>
-        <FormLabel sx={{fontFamily:"Markazi Text,serif", fontSize:"1.5em",fontWeight:"bold",color:"#000"}}>Notes:</FormLabel>
+        <FormLabel id='comments-label' sx={{fontFamily:"Markazi Text,serif", fontSize:"1.5em",fontWeight:"bold",color:"#000"}}>Notes:</FormLabel>
         </Typography>
-        <TextField sx={{marginTop:1}} id="outlined-basic" multiline maxRows={4} label="comments(optional)" variant="outlined"  fullWidth="true"/>
+        <TextField id="comments" multiline maxRows={4} label="comments(optional)" variant="filled" size='small' fullWidth="true"/>
         <FormGroup>
       <FormControlLabel required control={<Checkbox color='success' />}label="I agree to Little's Lemon terms & condition" />
     </FormGroup>
-        <Button variant="contained" color='success' sx={{marginTop:1, backgroundColor:"#495e57"}} fullWidth="true">
-        Success
-      </Button>
+    <Box sx={{flexGrow:1 }}>
+    <Grid container spacing={10}>
+    <Grid item>
+    <Button variant="contained" color='success' sx={{marginTop:1, width:"16em"}} >
+    Submit
+    </Button>
+    </Grid>
+    <Grid item>
+    <Button variant="contained" color='error' sx={{marginTop:1, width:"9em"}} >
+    Clear
+    </Button>
+    </Grid>
+    </Grid>
+    </Box>
+
    </form>
   )
 }

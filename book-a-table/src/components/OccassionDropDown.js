@@ -10,12 +10,12 @@ import MenuItem from '@mui/material/MenuItem';
 import MenuList from '@mui/material/MenuList';
 import CelebrationIcon from '@mui/icons-material/Celebration';
 
-const options = ['Dinner Events', 'Birthday Parties', 'Wedding Ceremonies', 'Others Occassions'];
+const options = ['Wedding Ceremonies','Dinner Events', 'Birthday Parties', 'Others Occassions'];
 
 export default function OccassionDropDown() {
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
-  const [selectedIndex, setSelectedIndex] = React.useState(1);
+  const [selectedIndex, setSelectedIndex] = React.useState(0);
 
   const handleClick = () => {
     console.info(`You clicked ${options[selectedIndex]}`);

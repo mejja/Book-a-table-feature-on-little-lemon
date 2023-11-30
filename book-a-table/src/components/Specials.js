@@ -2,7 +2,6 @@ import * as React from 'react';
 import "../App.css";
 import { Container, Typography } from '@mui/material';
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/Grid';
 import menus from  "../data.json";
 import Stack from '@mui/material/Stack';
 import DishCard from './DishCard';
@@ -25,7 +24,7 @@ export default function Specials() {
       variant="h2"
       component="h2"
       marginTop={5}
-      marginButtom={3}
+      marginBottom={3}
       sx={{fontWeight:"bold"}}
       >
         {menu.name}
