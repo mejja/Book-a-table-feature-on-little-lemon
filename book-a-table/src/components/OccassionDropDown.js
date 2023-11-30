@@ -42,7 +42,7 @@ export default function OccassionDropDown() {
       <ButtonGroup variant="contained" ref={anchorRef} fullWidth="true" aria-label="split button">
         <Button onClick={handleClick}>{options[selectedIndex]}</Button>
         <Button
-          size="large"
+          size="medium"
           aria-controls={open ? 'split-button-menu' : undefined}
           aria-expanded={open ? 'true' : undefined}
           aria-label="select merge strategy"

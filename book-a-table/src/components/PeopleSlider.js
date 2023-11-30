@@ -49,6 +49,7 @@ const marks = [
   },
 ];
 
+
 function valuetext(value) {
   return   `${value}`;
 }
@@ -63,6 +64,7 @@ export default function PeopleSlider() {
         step={1}
         marks={marks}
         valueLabelDisplay="on"
+        sx={{color:"#f4ce14", border:4, borderColor:"#f4ce14", padding:0, marginTop:2}}
       />
     </Box>
   );
