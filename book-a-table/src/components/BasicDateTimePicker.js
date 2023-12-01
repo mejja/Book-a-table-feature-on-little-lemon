@@ -11,8 +11,29 @@ export default function CustomDateTimePicker() {
   const [dateWithInitialValue, setDateWithInitialValue] = React.useState(
     dayjs(new Date()),
   );
+  // Set max and Min time
 const sixAM = dayjs().set('hour', 6).startOf('hour');
-const tenPM = dayjs().set('hour', 10).startOf('hour');
+const tenPM = dayjs().set('hour', 22).startOf('hour');
+
+// Show error message
+const [error, setError] = React.useState(null);
+
+const errorMessage = React.useMemo(() => {
+  switch (error) {
+    case 'maxTime':
+    case 'minTime': {
+      return 'Please select a date and time within normal working hours';
+    }
+
+    case 'invalidDate': {
+      return 'Your date is not valid';
+    }
+
+    default: {
+      return '';
+    }
+  }
+}, [error]);
 
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -22,17 +43,17 @@ const tenPM = dayjs().set('hour', 10).startOf('hour');
           onChange={(newValue) => {
             setDateWithInitialValue(newValue);
           }}
+          onError={(newError) => setError(newError)}
           required
           // label="Required"
           formatDensity='spacious'
           minTime={sixAM}
           maxTime={tenPM}
-          onError={console.log}
           minDate={dayjs(new Date())}
           inputFormat="YYYY/MM/DD hh:mm a"
           mask="____/__/__ __:__ _M"
           renderInput={(params) => <TextField {...params} />}
-          slotProps={{ textField: { variant: "filled", size:"small", helperText: "Please fill this field" , hidden:"true"},
+          slotProps={{ textField: { variant: "filled", size:"small", helperText: errorMessage, hidden:"true"},
           field: { clearable: true }}}
          />
       </Stack>

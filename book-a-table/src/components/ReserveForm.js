@@ -13,7 +13,7 @@ export default function ReserveForm() {
   return (
    <form id='reservation-form'>
     <Typography sx={{marginBottom:-2}}>
-    <FormLabel sx={{fontFamily:"Markazi Text,serif", fontSize:"1.5em", fontWeight:"bold",color:"#000"}}>Customer's Name:</FormLabel>
+    <FormLabel sx={{fontFamily:"Markazi Text,serif",fontSize:"1.1em", fontWeight:"bold",color:"#000"}}>Customer's Name:</FormLabel>
     </Typography>
     <Grid container sx={{marginY:2}}>
         <Grid item xs={6} marginX={0} display={'flex'} flexDirection={"row"}>
@@ -38,7 +38,7 @@ export default function ReserveForm() {
         </Grid>
         </Grid>
         <Typography sx={{marginBottom:-2, marginTop:-1}}>
-        <FormLabel sx={{fontFamily:"Markazi Text,serif", fontSize:"1.5em",fontWeight:"bold",color:"#000"}}>E-mail:</FormLabel>
+        <FormLabel sx={{fontFamily:"Markazi Text,serif",fontSize:"1.1em",fontWeight:"bold",color:"#000"}}>E-mail:</FormLabel>
         </Typography>
     <Grid item  sx={{marginY:2}} marginX={0}>
             <TextField
@@ -46,28 +46,28 @@ export default function ReserveForm() {
              fullWidth="true"
              id="outlined-required"
              label="name@domain.com"
-             helperText="This Field can't be empty." 
+             helperText="This Field can't be empty."
              variant="filled"
              size="small"
             />
     </Grid>
     <Typography sx={{marginTop:-1}}>
-        <FormLabel id='Data&Time-label' sx={{fontFamily:"Markazi Text,serif", fontSize:"1.5em",fontWeight:"bold", color:"#000"}}>Date & Time:</FormLabel>
+        <FormLabel id='Data&Time-label' sx={{fontFamily:"Markazi Text,serif",fontSize:"1.1em",fontWeight:"bold", color:"#000"}}>Date & Time:</FormLabel>
         </Typography>
         {/* Reduced date picker width */}
         <Box width={"80%"}>
         < BasicDateTimePicker />
         </Box>
         <Typography sx={{marginBottom:-3, marginTop:1}} >
-        <FormLabel  id='numberOfPeopla-label' sx={{fontFamily:"Markazi Text,serif", fontSize:"1.5em",fontWeight:"bold", color:"#000"}}>Number of People:</FormLabel>
+        <FormLabel  id='numberOfPeopla-label' sx={{fontFamily:"Markazi Text,serif", fontSize:"1.1em",fontWeight:"bold", color:"#000"}}>Number of People:</FormLabel>
         </Typography>
         < PeopleSlider />
         <Typography sx={{marginTop:3}} >
-        <FormLabel id='occasionDropDown-label' sx={{fontFamily:"Markazi Text,serif", fontSize:"1.5em",fontWeight:"bold", color:"#000"}}>Occasion:</FormLabel>
+        <FormLabel id='occasionDropDown-label' sx={{fontFamily:"Markazi Text,serif",fontSize:"1.1em",fontWeight:"bold", color:"#000"}}>Occasion:</FormLabel>
         </Typography>
         < OccassionDropDown />
         <Typography>
-        <FormLabel id='comments-label' sx={{fontFamily:"Markazi Text,serif", fontSize:"1.5em",fontWeight:"bold",color:"#000"}}>Notes:</FormLabel>
+        <FormLabel id='comments-label' sx={{fontFamily:"Markazi Text,serif",fontSize:"1.2em",fontWeight:"bold",color:"#000"}}>Notes:</FormLabel>
         </Typography>
         <TextField id="comments" multiline maxRows={4} label="comments(optional)" variant="filled" size='small' fullWidth="true"/>
         <FormGroup>
