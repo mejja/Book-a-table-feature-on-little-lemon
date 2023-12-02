@@ -23,6 +23,7 @@ export default function ReserveForm() {
              label="First"
              helperText="This Field can't be empty."
              size="small"
+             sx={{bgcolor:'#F5F5F5'}}
             />
         </Grid>
         <Grid item xs={6} marginX={0}>
@@ -32,6 +33,7 @@ export default function ReserveForm() {
              label="Last"
              helperText="This Field can't be empty."
              size="small"
+             sx={{bgcolor:'#F5F5F5'}}
             />
         </Grid>
         </Grid>
@@ -46,6 +48,7 @@ export default function ReserveForm() {
              label="name@domain.com"
              helperText="This Field can't be empty."
              size="small"
+             sx={{bgcolor:'#F5F5F5'}}
             />
     </Grid>
     <Typography sx={{marginTop:-1}}>
@@ -66,7 +69,7 @@ export default function ReserveForm() {
         <Typography>
         <FormLabel id='comments-label' sx={{fontFamily:"Markazi Text,serif",fontSize:"1.2em",fontWeight:"bold",color:"#000"}}>Notes:</FormLabel>
         </Typography>
-        <TextField id="comments" multiline maxRows={4} label="comments(optional)"  size='small' fullWidth="true"/>
+        <TextField id="comments" multiline maxRows={4} label="comments(optional)" sx={{bgcolor:'#F5F5F5'}} size='small' fullWidth="true"/>
         <FormGroup>
       <FormControlLabel required control={<Checkbox color='success' />}label="I agree to Little's Lemon terms & condition" />
     </FormGroup>
