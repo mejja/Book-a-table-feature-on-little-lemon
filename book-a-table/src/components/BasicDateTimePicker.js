@@ -53,7 +53,7 @@ const errorMessage = React.useMemo(() => {
           inputFormat="YYYY/MM/DD hh:mm a"
           mask="____/__/__ __:__ _M"
           renderInput={(params) => <TextField {...params} />}
-          slotProps={{ textField: { variant: "filled", size:"small", helperText: errorMessage, hidden:"true"},
+          slotProps={{ textField: {size:"small", helperText: errorMessage, hidden:"true"},
           field: { clearable: true }}}
          />
       </Stack>
