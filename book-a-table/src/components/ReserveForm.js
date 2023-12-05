@@ -42,7 +42,6 @@ export default function ReserveForm() {
         </Typography>
     <Grid item  sx={{marginY:2}} marginX={0}>
             <TextField
-             color="warning"
              required
              fullWidth="true"
              id="outlined-required"
