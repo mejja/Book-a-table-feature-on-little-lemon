@@ -238,5 +238,4 @@ export default function ResponsiveHeader() {
     </AppBar>
   );
 }
-// export default ResponsiveAppBar;
 
