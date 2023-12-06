@@ -23,8 +23,8 @@ export default function Banner() {
   return (
     <ThemeProvider theme={theme}>
     <header className="banner-box">
-      <Box style={{ height: 550, paddingLeft: 30, paddingTop: 40}}>
-        <Grid container spacing={{ xs: 2, md: 4, lg: 8 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+      <Box style={{ height: 550, paddingLeft: 30, paddingTop: 40, }}>
+        <Grid container spacing={{ xs: 2, md: 4, lg: 8 }} columns={{ xs: 4, sm: 8, md: 12 }} marginRight={0}>
         <Grid xs={1} sm={1} md={4}>
           {/* <div className='d-flex justify-content-center align-items-center h-100'> */}
             <div className='banner-content' style={{paddingLeft: "6em"}}>

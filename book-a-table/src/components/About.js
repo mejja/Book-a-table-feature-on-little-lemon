@@ -7,7 +7,7 @@ import { Box } from '@mui/material';
 
 export default function About() {
   return (
-    <Box sx={{borderBottom:7}}>
+    <Box sx={{borderBottom:7, marginRight:0}}>
             <div className='about'>
             <div className='about-content'>
             <h4>

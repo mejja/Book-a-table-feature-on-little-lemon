@@ -23,8 +23,8 @@ function App({dishes}) {
   return (
     <ThemeProvider theme={theme}>
     <div className="App">
-    < ResponsiveHeader />
-    < Banner />
+    <ResponsiveHeader />
+    <Banner />
     < Specials />
     </div>
     < Testimonials />

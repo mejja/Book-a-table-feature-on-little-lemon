@@ -25,7 +25,7 @@ export default function Specials() {
       component="h2"
       marginTop={5}
       marginBottom={3}
-      sx={{fontWeight:"bold"}}
+      sx={{fontWeight:"bold",}}
       >
         {menu.name}
       </Typography>
