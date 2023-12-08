@@ -1,6 +1,5 @@
 import "../App.css";
 import React from 'react';
-import Button from '@mui/material/Button';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Box } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
@@ -30,7 +29,7 @@ export default function Banner() {
             <div className='banner-content' style={{paddingLeft: "6em"}}>
               <h1  style={{color: 'yellow', fontSize:50}}>Little Lemon</h1>
               <h2>Chicago</h2>
-              <h2 style={{marginTop: 40, marginBottom:40, maxWidth:400}} textArea>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</h2>
+              <h2 style={{marginTop: 40, marginBottom:40, maxWidth:400}} textarea="true">We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</h2>
               <ReserveTableModal />
               {/* <Button variant="contained" color="ochre" size="medium"
               style={{maxHeight: "4em",  minWidth: "300px", minHeight: "4em", fontFamily: "Karla,sans-serif", fontSize: "18px", fontWeight: "800", borderRadius: "3em"}}

@@ -25,9 +25,9 @@ function App({dishes}) {
     <div className="App">
     <ResponsiveHeader />
     <Banner />
-    < Specials />
+    <Specials />
     </div>
-    < Testimonials />
+    <Testimonials />
     <About />
     <Footer/>
     </ThemeProvider>

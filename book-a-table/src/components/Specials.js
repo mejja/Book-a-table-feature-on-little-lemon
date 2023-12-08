@@ -13,7 +13,7 @@ export default function Specials() {
    return (
 
     <Container>
-    {menus.map((menu) => (
+    {menus.map((menu, id) => (
       <>
       <Stack
       direction={{xs: "column", sm: "column", md: "row", lg:"row"}}
@@ -35,10 +35,10 @@ export default function Specials() {
       </Button>
       </div>
       </Stack>
-      <div >
+      <div>
       <Stack container spacing={0} direction={{xs: "column", sm: "column", md: "row", lg:"row",}}>
-        {menu.dishes.map((dish, index) => 
-        <DishCard dish={dish} key={index}/>)}
+        {menu.dishes.map((dish, id) => 
+        <DishCard dish={dish} key={dish.id}/>)}
       </Stack>
       </div>
       </>
