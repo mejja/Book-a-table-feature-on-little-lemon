@@ -92,7 +92,7 @@ export default function PeopleSlider() {
             step={1}
             marks={people}
             valueLabelDisplay="auto"
-            sx={{ color: "#f4ce14", border: 4, borderColor: "#f4ce14", padding: 0, width:"19em", marginTop: 1, }} />
+            sx={{ color: "#f4ce14", border: 4, borderColor: "#f4ce14", padding: 0, width:"17em", marginTop: 1, }} />
              </Grid>
              <Grid item>
              <Input

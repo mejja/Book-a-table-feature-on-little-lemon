@@ -10,11 +10,13 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: '27em',
-  minHeight:'38em',
+  width: '25em',
+  height: '30em',
+  minHeight:'35em',
   bgcolor: '#f2efef',
   border: '10px solid #495e57',
-  boxShadow: 30,
+  boxShadow: 60,
+  padding:'0px',
   borderRadius:5,
   p: 4,
 };
@@ -27,7 +29,7 @@ export default function ReserveTableModal() {
   return (
     <div>
       <Button variant="contained" color="ochre" size="medium"
-       style={{maxHeight: "4em",  minWidth: "300px", minHeight: "4em", fontFamily: "Karla,sans-serif", fontSize: "18px", fontWeight: "800", borderRadius: "3em"}}
+       style={{maxHeight: "4em",  minWidth: "4em", minHeight: "4em", fontFamily: "Karla,sans-serif", fontSize: "18px", fontWeight: "800", borderRadius: "3em"}}
       onClick={handleOpen}>RESERVE A TABLE</Button>
       <Modal
         open={open}

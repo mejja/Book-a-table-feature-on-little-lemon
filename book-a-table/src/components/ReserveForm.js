@@ -76,7 +76,7 @@ export default function ReserveForm() {
     <Box sx={{flexGrow:1 }}>
     <Grid container spacing={10}>
     <Grid item>
-    <Button variant="contained" color='success' sx={{marginTop:1, width:"16em"}} >
+    <Button variant="contained" color='success' sx={{marginTop:1, width:"12em"}} >
     Submit
     </Button>
     </Grid>
