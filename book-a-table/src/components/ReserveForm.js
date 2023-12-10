@@ -8,9 +8,11 @@ import { Button } from '@mui/material';
 import Checkbox from '@mui/material/Checkbox';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
+import { Formik } from 'formik';
 
 export default function ReserveForm() {
   return (
+    <Formik>
    <form id='reservation-form'>
     <Typography sx={{marginBottom:-2}}>
     <FormLabel sx={{fontFamily:"Markazi Text,serif",fontSize:"1.1em", fontWeight:"bold",color:"#000"}}>Customer's Name:</FormLabel>
@@ -88,6 +90,7 @@ export default function ReserveForm() {
     </Grid>
     </Box>
    </form>
+   </Formik>
   )
 }
 
