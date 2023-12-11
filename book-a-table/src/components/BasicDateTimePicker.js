@@ -8,7 +8,7 @@ import Stack from '@mui/material/Stack';
 
 export default function CustomDateTimePicker() {
 
-  const [dateWithInitialValue, setDateWithInitialValue] = React.useState(
+  const [setDateWithInitialValue] = React.useState(
     dayjs(new Date()),
   );
   // Set max and Min time
