@@ -31,7 +31,6 @@ function App({dishes}) {
     <Testimonials />
     <About />
     <Footer/>
-    <MaterialForm />
     </ThemeProvider>
 
   );

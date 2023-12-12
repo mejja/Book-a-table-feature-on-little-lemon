@@ -9,7 +9,7 @@ import Checkbox from "@mui/material/Checkbox";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import { Field, Form, Formik} from "formik";
-import { ValidationSchema } from "../schemas";
+import { object, string } from "yup";
 
 const intialValues = {
   firstName: "",
@@ -27,9 +27,13 @@ export default function ReserveForm() {
       console.log(values);
       formikHelpers.resetForm();
     }}
-    // validationSchema={ValidationSchema}
+    validationSchema={object({
+      email: string().email("Please enter a valid email").required("Required"),
+    firstName: string().min(3, "Too short 3 char min").required("Required"),
+    lastName: string().min(3, "Too short 3 char min").required("Required"),
+    })}
     >
-      {() => (
+      {({errors, isValid, touched, dirty}) => (
       <Form>
         <Typography sx={{ marginBottom: -2 }}>
           <FormLabel
@@ -52,13 +56,14 @@ export default function ReserveForm() {
             flexDirection={"row"}
           >
             <Field
-              name="firstName"
+              name="firstName" 
               type="firstName"
               as={TextField}
               id="outlined-required"
               label="First"
               size="small"
-              sx={{ bgcolor: "#F5F5F5" }}
+              error={Boolean(errors.firstName) && Boolean(touched.firstName)} 
+              helperText={Boolean(touched.firstName) && errors.firstName}
             />
           </Grid>
           <Grid item xs={5.9} marginLeft={0.2}>
@@ -68,7 +73,8 @@ export default function ReserveForm() {
               id="outlined-required"
               label="Last"
               size="small"
-              sx={{ bgcolor: "#F5F5F5" }}
+              error={Boolean(errors.lastName) && Boolean(touched.lastName)} 
+              helperText={Boolean(touched.firstName) && errors.lastName}
             />
           </Grid>
         </Grid>
@@ -93,7 +99,8 @@ export default function ReserveForm() {
             label="name@domain.com"
             size="small"
             fullwidth="true"
-            sx={{ bgcolor: "#F5F5F5" }}
+            error={Boolean(errors.email) && Boolean(touched.email)} 
+            helperText={Boolean(touched.email) && errors.email}
 
           />
         </Grid>
@@ -111,7 +118,11 @@ export default function ReserveForm() {
           </FormLabel>
         </Typography>
         <Box width={"80%"}>
-          <BasicDateTimePicker name="dateTime" />
+          <BasicDateTimePicker
+          name="dateTime"
+          error={Boolean(errors.firstName) && Boolean(touched.firstName)}
+          helperText={Boolean(touched.firstName) && errors.firstName}
+          />
         </Box>
         <Typography sx={{ marginBottom: -3, marginTop: 1 }}>
           <FormLabel
@@ -161,7 +172,6 @@ export default function ReserveForm() {
           multiline
           maxRows={4}
           label="comments(optional)"
-          sx={{ bgcolor: "#F5F5F5" }}
           size="small"
           fullwidth="true"
         />
@@ -180,6 +190,7 @@ export default function ReserveForm() {
               type="submit"
               fullwidth="true"
               size="large"
+              disabled={!dirty || !isValid}
             >Submit
             </Button>
           </Grid>
