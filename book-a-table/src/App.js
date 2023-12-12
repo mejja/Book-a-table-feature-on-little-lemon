@@ -6,6 +6,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import About from './components/About';
 import Footer from './components/Footer';
 import Specials from './components/Specials'
+import MaterialForm from './components/material-form';
 
 
 
@@ -30,6 +31,7 @@ function App({dishes}) {
     <Testimonials />
     <About />
     <Footer/>
+    <MaterialForm />
     </ThemeProvider>
 
   );
