@@ -70,7 +70,7 @@ export default function PeopleSlider() {
 
   const handleBlur = () => {
     if (value < 0) {
-      setValue(0);
+      setValue(1);
     } else if (value > 10) {
       setValue(10);
     }

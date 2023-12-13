@@ -17,6 +17,8 @@ const intialValues = {
   email: "",
   dateTime: "",
   comments: "",
+  PeopleSlider: "",
+
 };
 
 export default function ReserveForm() {
@@ -120,8 +122,8 @@ export default function ReserveForm() {
         <Box width={"80%"}>
           <BasicDateTimePicker
           name="dateTime"
-          error={Boolean(errors.firstName) && Boolean(touched.firstName)}
-          helperText={Boolean(touched.firstName) && errors.firstName}
+          error={Boolean(errors.dateTime) && Boolean(touched.dateTime)}
+          helperText={Boolean(touched.dateTime) && errors.dateTime}
           />
         </Box>
         <Typography sx={{ marginBottom: -3, marginTop: 1 }}>

@@ -13,8 +13,8 @@ export default function Specials() {
    return (
 
     <Container>
-    {menus.map((menu, id) => (
-      <>
+    {menus.map((menu, menuId) => (
+      <React.Fragment key={menuId}>
       <Stack
       direction={{xs: "column", sm: "column", md: "row", lg:"row"}}
       spacing={{xs: 1, sm: 2, md: 5, lg: 70 }}
@@ -37,11 +37,11 @@ export default function Specials() {
       </Stack>
       <div>
       <Stack container spacing={0} direction={{xs: "column", sm: "column", md: "row", lg:"row",}}>
-        {menu.dishes.map((dish, id) => 
-        <DishCard dish={dish} key={dish.id}/>)}
+        {menu.dishes.map((dish, dishId) => 
+        <DishCard dish={dish} key={dishId}/>)}
       </Stack>
       </div>
-      </>
+      </React.Fragment>
     ))}
   </Container>
 )}

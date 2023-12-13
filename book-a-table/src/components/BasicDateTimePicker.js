@@ -8,9 +8,7 @@ import Stack from '@mui/material/Stack';
 
 export default function CustomDateTimePicker() {
 
-  const [setDateWithInitialValue] = React.useState(
-    dayjs(new Date()),
-  );
+  const [dateWithInitialValue, setDateWithInitialValue] = React.useState();
   // Set max and Min time
 const sixAM = dayjs().set('hour', 6).startOf('hour');
 const tenPM = dayjs().set('hour', 22).startOf('hour');
@@ -39,12 +37,13 @@ const errorMessage = React.useMemo(() => {
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <Stack spacing={3} components={MobileDateTimePicker}>
         <MobileDateTimePicker
-          //value={dateWithInitialValue}
+          value={dateWithInitialValue}
           onChange={(newValue) => {
             setDateWithInitialValue(newValue);
           }}
           onError={(newError) => setError(newError)}
           required
+          clearable
           // label="Required"
           formatDensity='spacious'
           minTime={sixAM}
