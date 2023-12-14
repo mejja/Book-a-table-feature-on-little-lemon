@@ -36,7 +36,7 @@ export default function Specials() {
       </div>
       </Stack>
       <div>
-      <Stack container spacing={0} direction={{xs: "column", sm: "column", md: "row", lg:"row",}}>
+      <Stack spacing={0} direction={{xs: "column", sm: "column", md: "row", lg:"row",}}>
         {menu.dishes.map((dish, dishId) => 
         <DishCard dish={dish} key={dishId}/>)}
       </Stack>

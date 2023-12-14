@@ -15,10 +15,7 @@ const intialValues = {
   firstName: "",
   lastName: "",
   email: "",
-  dateTime: "",
   comments: "",
-  PeopleSlider: "",
-
 };
 
 export default function ReserveForm() {
@@ -92,7 +89,7 @@ export default function ReserveForm() {
             E-mail:
           </FormLabel>
         </Typography>
-        <Grid item sx={{ marginY: 2 }} marginX={0}>
+        <Box sx={{ marginY: 2}} marginX={0}>
           <Field
             name="email"
             type="email"
@@ -100,12 +97,10 @@ export default function ReserveForm() {
             id="outlined"
             label="name@domain.com"
             size="small"
-            fullwidth="true"
             error={Boolean(errors.email) && Boolean(touched.email)} 
             helperText={Boolean(touched.email) && errors.email}
-
           />
-        </Grid>
+        </Box>
         <Typography sx={{ marginTop: -1 }}>
           <FormLabel
             id="Data&Time-label"
@@ -119,16 +114,12 @@ export default function ReserveForm() {
             Date & Time:
           </FormLabel>
         </Typography>
-        <Box width={"80%"}>
-          <BasicDateTimePicker
-          name="dateTime"
-          error={Boolean(errors.dateTime) && Boolean(touched.dateTime)}
-          helperText={Boolean(touched.dateTime) && errors.dateTime}
-          />
+        <Box>
+          <BasicDateTimePicker />
         </Box>
         <Typography sx={{ marginBottom: -3, marginTop: 1 }}>
           <FormLabel
-            id="numberOfPeopla-label"
+            id="numberOfPeople-label"
             sx={{
               fontFamily: "Markazi Text,serif",
               fontSize: "1.1em",
@@ -175,7 +166,6 @@ export default function ReserveForm() {
           maxRows={4}
           label="comments(optional)"
           size="small"
-          fullwidth="true"
         />
         <FormGroup>
           <FormControlLabel
@@ -190,8 +180,8 @@ export default function ReserveForm() {
               variant="contained"
               color="success"
               type="submit"
-              fullwidth="true"
               size="large"
+              fullWidth
               disabled={!dirty || !isValid}
             >Submit
             </Button>

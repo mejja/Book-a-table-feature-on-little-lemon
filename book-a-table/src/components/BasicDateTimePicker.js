@@ -8,7 +8,7 @@ import Stack from '@mui/material/Stack';
 
 export default function CustomDateTimePicker() {
 
-  const [dateWithInitialValue, setDateWithInitialValue] = React.useState();
+  const [dateWithInitialValue, setDateWithInitialValue] = React.useState(dayjs());
   // Set max and Min time
 const sixAM = dayjs().set('hour', 6).startOf('hour');
 const tenPM = dayjs().set('hour', 22).startOf('hour');
@@ -43,6 +43,7 @@ const errorMessage = React.useMemo(() => {
           }}
           onError={(newError) => setError(newError)}
           required
+          fullwidth
           clearable
           // label="Required"
           formatDensity='spacious'
@@ -52,8 +53,7 @@ const errorMessage = React.useMemo(() => {
           inputFormat="YYYY/MM/DD hh:mm a"
           mask="____/__/__ __:__ _M"
           renderInput={(params) => <TextField {...params} />}
-          slotProps={{ textField: { label:"Required", variant: "outlined", size:"small", helperText: errorMessage, hidden:"true"},
-          field: { clearable: true }}}
+          slotProps={{ textField: { label:"Required", variant: "outlined", size:"small", helperText: errorMessage}}}
          />
       </Stack>
     </LocalizationProvider>
