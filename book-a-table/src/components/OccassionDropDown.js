@@ -38,7 +38,7 @@ export default function OccassionDropDown() {
     setOpen(false);
   };
 
-  return (()
+  return (
     <React.Fragment>
        <CelebrationIcon  fontSize='large'sx={{marginBottom:-1}}/>
       <ButtonGroup variant="contained" ref={anchorRef}  aria-label="split button" sx={{alignContent:"flex-end", marginLeft:2}}>
