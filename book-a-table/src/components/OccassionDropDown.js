@@ -10,7 +10,7 @@ import MenuItem from '@mui/material/MenuItem';
 import MenuList from '@mui/material/MenuList';
 import CelebrationIcon from '@mui/icons-material/Celebration';
 
-const options = ['select occassion', 'Wedding Ceremonies','Dinner Events', 'Birthday Parties', 'Others Occassions'];
+const options = ['select occasion', 'Wedding Ceremonies','Dinner Events', 'Birthday Parties', 'Others Occassions'];
 
 export default function OccassionDropDown() {
   const [open, setOpen] = React.useState(false);
