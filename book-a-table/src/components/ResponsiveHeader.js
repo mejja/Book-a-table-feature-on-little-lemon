@@ -106,15 +106,6 @@ export default function ResponsiveHeader() {
            <img src={logo} width="auto" height="auto" alt="Primary logo" />
            </div>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex", flexDirection:"row", margin: "0 20px" } }}>
-            {/* {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{my: 10, color: "red", display: "block", }}
-              >
-                {page}
-              </Button>
-            ))} */}
           </Box>
 
           {/* <Box sx={{ flexGrow: 0 }}>
