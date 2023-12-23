@@ -1,6 +1,7 @@
 import { FormLabel, Grid, TextField, Typography, Box } from "@mui/material";
 import React from "react";
 import "../App.css";
+import BasicDateTimePicker from "./BasicDateTimePicker";
 import PeopleSlider from "./PeopleSlider";
 import OccassionDropDown from "./OccassionDropDown";
 import { Button } from "@mui/material";
@@ -9,17 +10,6 @@ import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import { Field, Form, Formik} from "formik";
 import { object, string } from "yup";
-// imports for datepicker
-import dayjs from 'dayjs';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { MobileDateTimePicker } from '@mui/x-date-pickers/MobileDateTimePicker';
-import Stack from '@mui/material/Stack';
-
-
-
-
-
 
 const intialValues = {
   firstName: "",
@@ -29,31 +19,6 @@ const intialValues = {
 };
 
 export default function ReserveForm() {
-  const [dateWithInitialValue, setDateWithInitialValue] = React.useState("");
-  // Set max and Min time
-const sixAM = dayjs().set('hour', 6).startOf('hour');
-const tenPM = dayjs().set('hour', 22).startOf('hour');
-
-// Show error message
-const [error, setError] = React.useState(null);
-
-const errorMessage = React.useMemo(() => {
-  switch (error) {
-    case 'maxTime':
-    case 'minTime': {
-      return 'Please select a date and time within normal working hours';
-    }
-
-    case 'invalidDate': {
-      return 'Your date is not valid';
-    }
-
-    default: {
-      return '';
-    }
-  }
-}, [error]);
-
   return (
     <Formik
     initialValues={intialValues}
@@ -62,7 +27,7 @@ const errorMessage = React.useMemo(() => {
       formikHelpers.resetForm();
     }}
     validationSchema={object({
-    email: string().email("Please enter a valid email").required("Required"),
+      email: string().email("Please enter a valid email").required("Required"),
     firstName: string().min(3, "Too short 3 char min").required("Required"),
     lastName: string().min(3, "Too short 3 char min").required("Required"),
     })}
@@ -90,7 +55,7 @@ const errorMessage = React.useMemo(() => {
             flexDirection={"row"}
           >
             <Field
-              name="firstName"
+              name="firstName" 
               type="firstName"
               as={TextField}
               id="outlined-required"
@@ -150,29 +115,7 @@ const errorMessage = React.useMemo(() => {
           </FormLabel>
         </Typography>
         <Box>
-        <LocalizationProvider dateAdapter={AdapterDayjs}>
-        <Stack spacing={3} components={MobileDateTimePicker}>
-        <MobileDateTimePicker
-          value={dateWithInitialValue}
-          onChange={(newValue) => {
-            setDateWithInitialValue(newValue);
-          }}
-          name="date"
-          onError={(newError) => setError(newError)}
-          required
-          fullwidth
-          clearable
-          // label="Required"
-          formatDensity='spacious'
-          minTime={sixAM}
-          maxTime={tenPM}
-          minDate={dayjs(new Date())}
-          inputFormat="YYYY/MM/DD hh:mm a"
-          mask="____/__/__ __:__ _M"
-          slotProps={{ textField: { label:"Required", variant: "outlined", size:"small"}}}
-         />
-      </Stack>
-    </LocalizationProvider>
+          <BasicDateTimePicker />
         </Box>
         <Typography sx={{ marginBottom: -3, marginTop: 1 }}>
           <FormLabel
