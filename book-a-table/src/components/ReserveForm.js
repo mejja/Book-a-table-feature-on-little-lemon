@@ -133,7 +133,7 @@ export default function ReserveForm() {
         <PeopleSlider />
         <Typography sx={{ marginTop: 3 }}>
           <FormLabel
-            id="occasionDropDown-label"
+            id="occasion"
             sx={{
               fontFamily: "Markazi Text,serif",
               fontSize: "1.1em",
