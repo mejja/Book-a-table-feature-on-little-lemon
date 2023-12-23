@@ -1,6 +1,5 @@
 import * as React from 'react';
 import dayjs from 'dayjs';
-import TextField from '@mui/material/TextField';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { MobileDateTimePicker } from '@mui/x-date-pickers/MobileDateTimePicker';
@@ -52,7 +51,8 @@ const errorMessage = React.useMemo(() => {
           minDate={dayjs(new Date())}
           inputFormat="YYYY/MM/DD hh:mm a"
           mask="____/__/__ __:__ _M"
-          renderInput={(params) => <TextField {...params} />}
+          // renderInput={(params) => <TextField {...params}
+          // slotProps={{ textField:  { variant: 'outlined' }}} />}
           slotProps={{ textField: { label:"Required", variant: "outlined", size:"small", helperText: errorMessage}}}
          />
       </Stack>
