@@ -24,17 +24,17 @@ describe("Form Labels Testing", ()=> {
     const labelElement = screen.getByText(/Number of People/i);
     expect(labelElement).toBeInTheDocument();
   })
+  // test("occasion Label test", () => {
+  //   render(<ReserveForm />);
+  //   const element = screen.getByTestId("occasion-id");
+  //   expect(element).toBeInTheDocument();
+  // })
   test("comments Label Test", () => {
     render(<ReserveForm />);
     const labelElement = screen.getByText(/Notes/i);
     expect(labelElement).toBeInTheDocument();
   })
-})
-
-
-
-
-
+});
 
 
 describe("Input filed Testing", ()=> {
@@ -49,7 +49,16 @@ describe("Input filed Testing", ()=> {
     const nameElement = screen.getByLabelText(/Last/i);
     expect(nameElement).toBeInTheDocument();
   })
+  test("email inputfield", ()=> {
+    render(<ReserveForm/>);
+    const nameElement = screen.getByLabelText(/name@domain.com/i);
+    expect(nameElement).toBeInTheDocument();
+  })
+  test("notes inputfield", ()=> {
+    render(<ReserveForm/>);
+    const nameElement = screen.getByLabelText(/comments/i);
+    expect(nameElement).toBeInTheDocument();
+  })
 
-
-})
+});
 
