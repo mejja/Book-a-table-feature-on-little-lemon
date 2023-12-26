@@ -21,10 +21,10 @@ export default function Footer() {
                     <a className='a' href='/#'>Home</a>
                 </li>
                 <li>
-                    <a className='a' href='/#about'>About</a>
+                    <a className='a' href='/book-a-table/src/components/About.js'>About</a>
                 </li>
                 <li>
-                    <a className='a' href='/#menu'>Menu</a>
+                    <a className='a' href='/book-a-table/src/components/Specials.js'>Menu</a>
                 </li>
                 <li>
                     <a className='a' href='/#reservations'>Reservations</a>
