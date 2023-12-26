@@ -18,22 +18,22 @@ export default function Footer() {
             <ul>
                 <h5>Navigation</h5>
                 <li>
-                    <a className='a' href='/'>Home</a>
+                    <a className='a' href='/#'>Home</a>
                 </li>
                 <li>
-                    <a className='a' href='/about'>About</a>
+                    <a className='a' href='/#about'>About</a>
                 </li>
                 <li>
-                    <a className='a' href='/menu'>Menu</a>
+                    <a className='a' href='/#menu'>Menu</a>
                 </li>
                 <li>
-                    <a className='a' href='/reservations'>Reservations</a>
+                    <a className='a' href='/#reservations'>Reservations</a>
                 </li>
                 <li>
-                    <a className='a' href='/order'>Order Online</a>
+                    <a className='a' href='/#order'>Order Online</a>
                 </li>
                 <li>
-                    <a className='a' href='/login'>Login</a>
+                    <a className='a' href='/#login'>Login</a>
                 </li>
             </ul>
             </div>
@@ -41,13 +41,13 @@ export default function Footer() {
             <ul>
                 <h5>Contact</h5>
                 <li>
-                    <a id='nav' href='#'>Phone Number</a>
+                    <a id='nav' href='/#'>Phone Number</a>
                 </li>
                 <li>
-                    <a id='nav' href='#'>Email</a>
+                    <a id='nav' href='/#'>Email</a>
                 </li>
                 <li>
-                    <a id='nav' href='#'>Address</a>
+                    <a id='nav' href='/#'>Address</a>
                 </li>
             </ul>
             </div>
@@ -55,13 +55,13 @@ export default function Footer() {
             <ul>
                 <h5>Social Media</h5>
                 <li>
-                    <a id='nav' href='#'>Instagram</a>
+                    <a id='nav' href='/#'>Instagram</a>
                 </li>
                 <li>
-                    <a id='nav' href='#'>Linkedln</a>
+                    <a id='nav' href='/#'>Linkedln</a>
                 </li>
                 <li>
-                    <a id='nav' href='#'>Pinterest</a>
+                    <a id='nav' href='/#'>Pinterest</a>
                 </li>
             </ul>
             </div>
