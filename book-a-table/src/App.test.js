@@ -1,6 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 import ReserveForm from './components/ReserveForm';
+import userEvent from '@testing-library/user-event'
+import { act } from 'react-dom/test-utils';
 
 
 describe("Form Labels Testing", ()=> {
@@ -24,11 +26,7 @@ describe("Form Labels Testing", ()=> {
     const labelElement = screen.getByText(/Number of People/i);
     expect(labelElement).toBeInTheDocument();
   })
-  // test("occasion Label test", () => {
-  //   render(<ReserveForm />);
-  //   const element = screen.getByTestId("occasion-id");
-  //   expect(element).toBeInTheDocument();
-  // })
+
   test("comments Label Test", () => {
     render(<ReserveForm />);
     const labelElement = screen.getByText(/Notes/i);
@@ -61,10 +59,27 @@ describe("Input field Testing", ()=> {
   })
 
 });
-describe("User Input events Testing", ()=> {
-  test("Firstname user input", ()=> {
-
+describe("User Input events Testin0g", ()=> {
+  test("Firstname text input",  async ()=> {
+    const user = userEvent.setup()
+    act(()=> {
+      render(<ReserveForm placeholder="First"/>)
+    })
+    const input = screen.getByLabelText('First')
+    await user.type(input, "Major")
+    expect(input).toHaveValue("Major")
   })
+
+  test("Lastname text input",  async ()=> {
+    const user = userEvent.setup()
+    act(()=> {
+      render(<ReserveForm placeholder="Last"/>)
+    })
+    const input = screen.getByLabelText('Last')
+    await user.type(input, "Mbandi")
+    expect(input).toHaveValue("Mbandi")
+  })
+
 
 });
 
