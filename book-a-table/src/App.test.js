@@ -37,7 +37,7 @@ describe("Form Labels Testing", ()=> {
 });
 
 
-describe("Input filed Testing", ()=> {
+describe("Input field Testing", ()=> {
   test("firstName inputfield", ()=> {
     render(<ReserveForm/>);
     const nameElement = screen.getByLabelText(/First/i);
@@ -58,6 +58,12 @@ describe("Input filed Testing", ()=> {
     render(<ReserveForm/>);
     const nameElement = screen.getByLabelText(/comments/i);
     expect(nameElement).toBeInTheDocument();
+  })
+
+});
+describe("User Input events Testing", ()=> {
+  test("Firstname user input", ()=> {
+
   })
 
 });
