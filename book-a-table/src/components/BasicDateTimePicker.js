@@ -44,7 +44,6 @@ const errorMessage = React.useMemo(() => {
           required
           fullwidth
           clearable
-          // label="Required"
           formatDensity='spacious'
           minTime={sixAM}
           maxTime={tenPM}
