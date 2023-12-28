@@ -79,7 +79,5 @@ describe("User Input events Testin0g", ()=> {
     await user.type(input, "Mbandi")
     expect(input).toHaveValue("Mbandi")
   })
-
-
 });
 
