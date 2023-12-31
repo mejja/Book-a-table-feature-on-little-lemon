@@ -51,7 +51,7 @@ export default function Footer() {
                 </li>
             </ul>
             </div>
-            #social List
+            {/* social List */}
             <div className='socials'>
             <ul>
                 <h5>Social Media</h5>
