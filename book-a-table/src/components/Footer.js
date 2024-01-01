@@ -37,6 +37,7 @@ export default function Footer() {
                 </li>
             </ul>
             </div>
+            {/* Contact information */}
             <div className='contact'>
             <ul>
                 <h5>Contact</h5>
