@@ -15,6 +15,7 @@ export default function Footer() {
               src={logo} alt="Secondary logo"/>
             </div>
             <div className='navigation'>
+                {/* Page Navigation Links */}
             <ul>
                 <h5>Navigation</h5>
                 <li>
