@@ -72,6 +72,7 @@ describe("User Input events Testin0g", ()=> {
 
   test("Lastname text input",  async ()=> {
     const user = userEvent.setup()
+    // eslint-disable-next-line testing-library/no-unnecessary-act
     act(()=> {
       render(<ReserveForm placeholder="Last"/>)
     })
