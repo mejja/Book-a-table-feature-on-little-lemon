@@ -37,6 +37,7 @@ export default function ReserveTableModal() {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
+        {/* Reserve table button */}
         <Box sx={style}>
           <Box sx={{marginTop:-4, background:"#495e57",marginX:-5}}>
           <Typography id="modal-modal-title" variant="h3" component="h2" textAlign={"center"} color={'#f4ce14'} fontWeight={"bold"}>
