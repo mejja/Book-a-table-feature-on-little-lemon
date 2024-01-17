@@ -5,7 +5,7 @@ import React from 'react';
 export default function Login() {
   return (
     <div>
-    <h1>LoginPage</h1>
+    <h2>LoginPage</h2>
     </div>
   )
 }
