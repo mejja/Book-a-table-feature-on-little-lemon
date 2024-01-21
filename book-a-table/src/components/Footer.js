@@ -64,7 +64,7 @@ export default function Footer() {
                     <a id='nav' href='/#'>Linkedln</a>
                 </li>
                 <li>
-                    <a id='nav' href='/#'>Pinterest</a>
+                    <a id='nav' href='/#'>Tiktok</a>
                 </li>
             </ul>
             </div>
