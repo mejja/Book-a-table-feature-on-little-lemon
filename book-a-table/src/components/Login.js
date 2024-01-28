@@ -20,7 +20,6 @@ const card = (
     <CardContent>
     </CardContent>
     <CardActions>
-      <Button size="small">Learn More</Button>
     </CardActions>
   </React.Fragment>
 );
