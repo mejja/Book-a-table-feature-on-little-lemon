@@ -18,7 +18,7 @@ export default function OutlinedCard() {
   return (
     <Box sx={{ minWidth: 275 }}>
       <Card variant="outlined">{card}</Card>
-      <h1>Login</h1>
+      <h1>Login Form</h1>
     </Box>
   );
 }
