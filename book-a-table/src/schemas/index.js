@@ -2,7 +2,6 @@ import * as yup from  "yup"
 
 const passwordRules = /^(?=.*\d)(?=.*[a-z]).{5,}$/;
 
-
 export const validationSchema = yup.object({
     email: yup
             .string()

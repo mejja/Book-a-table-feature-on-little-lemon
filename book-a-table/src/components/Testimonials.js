@@ -33,7 +33,7 @@ export default function Testimonials() {
                       Major M.
                     </Typography>
                     <Typography id="h2" variant="body2" color="text.secondary">
-                      "Mkahawa wa kimataifa ulio na mandhari tulivu na chakula kitamu."
+                      "Mkahawa wa kifahari ulio na mandhari tulivu na chakula kitamu."
                     </Typography>
                   </CardContent>
                 </CardActionArea>
