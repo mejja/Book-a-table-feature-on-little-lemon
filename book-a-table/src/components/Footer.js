@@ -61,6 +61,9 @@ export default function Footer() {
                     <a id='nav' href='/#'>Instagram</a>
                 </li>
                 <li>
+                    <a id='nav' href='/#'>Facebook</a>
+                </li>
+                <li>
                     <a id='nav' href='/#'>Linkedln</a>
                 </li>
                 <li>
