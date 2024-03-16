@@ -51,6 +51,9 @@ export default function Footer() {
                 <li>
                     <a id='nav' href='/#'>Address</a>
                 </li>
+                <li>
+                    <a id='nav' href='/#'>Google Map</a>
+                </li>
             </ul>
             </div>
             {/* social List */}
