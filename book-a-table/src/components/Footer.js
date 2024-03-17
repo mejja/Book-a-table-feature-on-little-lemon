@@ -52,7 +52,7 @@ export default function Footer() {
                     <a id='nav' href='/#'>Address</a>
                 </li>
                 <li>
-                    <a id='nav' href='/#'>Google Map</a>
+                    <a id='nav' href='/#'>Map Directions</a>
                 </li>
             </ul>
             </div>
