@@ -49,6 +49,9 @@ export default function Footer() {
                     <a id='nav' href='/#'>Email</a>
                 </li>
                 <li>
+                <li>
+                    <a id='nav' href='/#'>Linkedin Page</a>
+                </li>
                     <a id='nav' href='/#'>Address</a>
                 </li>
                 <li>
