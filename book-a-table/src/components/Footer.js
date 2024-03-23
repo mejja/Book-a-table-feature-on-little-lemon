@@ -50,7 +50,7 @@ export default function Footer() {
                 </li>
                 <li>
                 <li>
-                    <a id='nav' href='/#'>Linkedin Page</a>
+                    <a id='nav' href='/#'>Linkedin</a>
                 </li>
                     <a id='nav' href='/#'>Address</a>
                 </li>
