@@ -73,7 +73,7 @@ export default function Footer() {
                     <a id='nav' href='/#'>Linkedln</a>
                 </li>
                 <li>
-                    <a id='nav' href='/#'>X(formerly Twitter)</a>
+                    <a id='nav' href='/#'>X(Twitter)</a>
                 </li>
                 <li>
                     <a id='nav' href='/#'>Pintrest</a>
