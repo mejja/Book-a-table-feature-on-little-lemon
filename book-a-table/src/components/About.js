@@ -13,7 +13,7 @@ export default function About() {
             </h4>
             <h5 >Chicago</h5>
             <p>
-            Little Lemon is mediterenian restaurant serverving local cuisine
+            Little Lemon is mediterenian restaurant serverving local delicacies with African Twist
             </p>
             </div>
             <div className='owners'>
