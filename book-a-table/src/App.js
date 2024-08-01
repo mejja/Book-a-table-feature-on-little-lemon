@@ -34,5 +34,5 @@ function App({dishes}) {
 
   );
 }
-
+//Default export command
 export default App;
